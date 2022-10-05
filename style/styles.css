@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --mainBlue: #14457B;
+    --lightBlue: #3fa8e1;
+    --iconGreen: #90d690;
+    --iconOrange: #dba94c;
+    --iconGray: #9a9999;
+    --background: #F5F5F5;
+    --borderGray: #d5d4d4;
+    --textGray: #5b5a5a;
+}
+
+body {
+    max-width: 1239px;
+    margin: 0 auto;
+}
+
+/*................INFO STYLES.................*/
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    border-bottom: 2px solid var(--borderGray);
+}
+
+.info .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .inner .box {
+    margin-right: 50px;
+}
+
+.info .inner .box i {
+    margin-right: 5px;
+    color: var(--lightBlue);
+}
+
+.info .inner .box span {
+    color: var(--textGray);
+}
+
+.info .media i {
+    margin-right: 5px;
+    color: var(--lightBlue);
+}
+
+/*........................HEADER STYLES........................*/
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    margin-top: 20px;
+
+    position: relative; /*//////avelavcrac*/
+}
+
+header .inner img {
+    height: 60px;
+    width: 220px;
+}
+
+header .inner nav a {
+    color: var(--black);
+    margin-right: 20px;
+}
+
+header #menu-bar {
+    font-size: 20px;
+    color: var(--black);
+    cursor: pointer;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+}
+
+.hide {
+    display: none !important;
+}
+
+/*...........................SUBHEADER STYLES.......................*/
+
+.subHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.subHeader .inner {
+    width: 49%;
+    padding: 50px;
+}
+
+.subHeader p {
+    font-size: 30px;
+}
+
+.subHeader button {
+    width: 200px;
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: var(--mainBlue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.subHeader img {
+    height: 350px;
+    width: 49%;
+    padding: 0 60px;
+}
+
+
+/*.......................MEDIA.........................*/
+
+/*.....................HEADER MEDIA STYLES......................*/
+@media (max-width: 1024px) {
+    header #menu-bar {
+        display: initial;
+    }
+
+    header .inner img {
+        height: 40px;
+        width: 180px;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--mainBlue);
+        display: none;
+    }
+
+    header .navbar.active {
+        display: block;
+    }
+
+    header .navbar a {
+        display: block;
+        background-color: var(--white);
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    /*..................SUBHEADER MEDIA STYLES.............*/
+    .subHeader {
+        margin-top: 20px;
+    }
+
+    .subHeader .inner {
+        padding: 0 20px;
+    }
+
+    .subHeader .inner p {
+        font-size: 25px;
+    }
+
+    .subHeader img {
+        height: 300px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .subHeader {
+        margin-top: 20px;
+    }
+
+    .subHeader .inner {
+        padding: 25px;
+    }
+
+    .subHeader .inner p {
+        font-size: 20px;
+    }
+
+    .subHeader .inner button {
+        width: 150px;
+    }
+
+    .subHeader img {
+        height: 250px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 660px) {
+    .info .inner {
+        flex-direction: column;
+    }
+}
