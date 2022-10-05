@@ -6,6 +6,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    list-style-type: none;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,11 +21,6 @@
     --background: #F5F5F5;
     --borderGray: #d5d4d4;
     --textGray: #5b5a5a;
-}
-
-body {
-    max-width: 1239px;
-    margin: 0 auto;
 }
 
 /*................INFO STYLES.................*/
@@ -73,14 +69,27 @@ header .inner {
     position: relative; /*//////avelavcrac*/
 }
 
-header .inner img {
+header .inner a img {
     height: 60px;
     width: 220px;
 }
 
-header .inner nav a {
+header .inner nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .inner nav ul li a {
+    background: none;
     color: var(--black);
     margin-right: 20px;
+}
+
+header .inner nav ul li a:hover {
+    color: var(--mainBlue);
+    border-bottom: 2px solid var(--mainBlue);
 }
 
 header #menu-bar {
@@ -97,25 +106,25 @@ header #menu-bar {
     display: none !important;
 }
 
-/*...........................SUBHEADER STYLES.......................*/
+/*...........................HERO STYLES.......................*/
 
-.subHeader {
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.subHeader .inner {
-    width: 49%;
+.hero .inner {
+    width: 40%;
     padding: 50px;
 }
 
-.subHeader p {
+.hero p {
     font-size: 30px;
 }
 
-.subHeader button {
+.hero button {
     width: 200px;
     padding: 10px 5px;
     margin-top: 20px;
@@ -125,9 +134,8 @@ header #menu-bar {
     cursor: pointer;
 }
 
-.subHeader img {
-    height: 350px;
-    width: 49%;
+.hero img {
+    width: 60%;
     padding: 0 60px;
 }
 
@@ -158,7 +166,7 @@ header #menu-bar {
         display: block;
     }
 
-    header .navbar a {
+    header .navbar ul li a {
         display: block;
         background-color: var(--white);
         padding: 5px;
@@ -167,42 +175,42 @@ header #menu-bar {
     }
 
     /*..................SUBHEADER MEDIA STYLES.............*/
-    .subHeader {
-        margin-top: 20px;
+    .hero {
+        margin-top: 0;
     }
 
-    .subHeader .inner {
+    .hero .inner {
         padding: 0 20px;
     }
 
-    .subHeader .inner p {
+    .hero .inner p {
         font-size: 25px;
     }
 
-    .subHeader img {
+    .hero img {
         height: 300px;
         padding: 0 10px;
     }
 }
 
 @media (max-width: 768px) {
-    .subHeader {
-        margin-top: 20px;
+    .hero {
+        margin-top: 0;
     }
 
-    .subHeader .inner {
+    .hero .inner {
         padding: 25px;
     }
 
-    .subHeader .inner p {
+    .hero .inner p {
         font-size: 20px;
     }
 
-    .subHeader .inner button {
+    .hero .inner button {
         width: 150px;
     }
 
-    .subHeader img {
+    .hero img {
         height: 250px;
         padding: 0 10px;
     }
