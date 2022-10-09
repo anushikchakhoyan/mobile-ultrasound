@@ -6,6 +6,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    list-style-type: none;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -22,9 +23,13 @@
     --textGray: #5b5a5a;
 }
 
-body {
-    max-width: 1239px;
-    margin: 0 auto;
+button {
+    min-width: 180px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
 }
 
 /*................INFO STYLES.................*/
@@ -69,26 +74,39 @@ header .inner {
     align-items: center;
     padding: 10px 40px;
     margin-top: 20px;
-
     position: relative; /*//////avelavcrac*/
 }
 
-header .inner img {
+header .inner a img {
     height: 60px;
     width: 220px;
 }
 
-header .inner nav a {
+header .navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar ul li {
+    padding: 0 15px;
+}
+
+header .navbar ul li a{
     color: var(--black);
-    margin-right: 20px;
+}
+
+header .navbar ul li:hover {
+    border-bottom: 2px solid var(--mainBlue);
+}
+
+header .navbar ul li:hover a{
+    color: var(--mainBlue);
 }
 
 header #menu-bar {
+    min-width: auto;
     font-size: 20px;
-    color: var(--black);
-    cursor: pointer;
-    border: 1px solid var(--black);
-    border-radius: 5px;
     padding: 5px;
     display: none;
 }
@@ -97,37 +115,33 @@ header #menu-bar {
     display: none !important;
 }
 
-/*...........................SUBHEADER STYLES.......................*/
+/*...........................HERO STYLES.......................*/
 
-.subHeader {
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.subHeader .inner {
-    width: 49%;
+.hero .inner {
+    width: 40%;
     padding: 50px;
+    gap: 20px;
+    display: grid;
 }
 
-.subHeader p {
+.hero p {
     font-size: 30px;
 }
 
-.subHeader button {
-    width: 200px;
-    padding: 10px 5px;
-    margin-top: 20px;
-    border-radius: 5px;
+.hero .inner a button {
     background: var(--mainBlue);
     color: var(--white);
-    cursor: pointer;
 }
 
-.subHeader img {
-    height: 350px;
-    width: 49%;
+.hero img {
+    width: 60%;
     padding: 0 60px;
 }
 
@@ -150,7 +164,8 @@ header #menu-bar {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--mainBlue);
+        background: var(--white);
+        box-shadow: 1px 1px 1px 1px #000000;
         display: none;
     }
 
@@ -158,58 +173,79 @@ header #menu-bar {
         display: block;
     }
 
-    header .navbar a {
+    header .navbar ul {
         display: block;
-        background-color: var(--white);
-        padding: 5px;
-        margin: 5px;
-        border-radius: 5px;
     }
 
     /*..................SUBHEADER MEDIA STYLES.............*/
-    .subHeader {
-        margin-top: 20px;
+    .hero {
+        margin-top: 0;
     }
 
-    .subHeader .inner {
+    .hero .inner {
         padding: 0 20px;
     }
 
-    .subHeader .inner p {
+    .hero .inner p {
         font-size: 25px;
     }
 
-    .subHeader img {
+    .hero img {
         height: 300px;
         padding: 0 10px;
     }
 }
 
 @media (max-width: 768px) {
-    .subHeader {
-        margin-top: 20px;
+    .info {
+        padding: 10px 20px;
+    }
+    .info .inner {
+        flex-direction: column;
+        align-items: start;
     }
 
-    .subHeader .inner {
-        padding: 25px;
+    .info .inner .box {
+        margin-right: 0;
+        font-size: 12px;
     }
 
-    .subHeader .inner p {
-        font-size: 20px;
+    header .inner {
+        padding: 10px 20px;
     }
 
-    .subHeader .inner button {
-        width: 150px;
+    header .inner a img {
+        height: 40px;
+        width: 160px;
     }
 
-    .subHeader img {
+    .hero {
+        margin-top: 0;
+        flex-direction: column-reverse;
+    }
+
+    .hero .inner {
+        width: auto;
+        padding: 0 25px;
+    }
+
+    .hero .inner p {
+        font-size: 16px;
+    }
+
+    .hero .inner a {
+        text-align: center;
+    }
+
+    .hero .inner a button {
+        min-width: 110px;
+        margin: 0 auto;
+    }
+
+    .hero img {
         height: 250px;
+        width: 300px;
         padding: 0 10px;
     }
 }
 
-@media (max-width: 660px) {
-    .info .inner {
-        flex-direction: column;
-    }
-}
