@@ -7,7 +7,7 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -30,6 +30,10 @@ button {
     font-size: 14px;
     cursor: pointer;
     background: none;
+}
+
+h2 {
+    font-size: 40px;
 }
 
 /*................INFO STYLES.................*/
@@ -59,10 +63,15 @@ button {
 
 .info .inner .box span {
     color: var(--textGray);
+    font-size: 12px;
 }
 
-.info .media i {
-    margin-right: 5px;
+.info .media {
+    display: flex;
+    gap: 20px;
+}
+
+.info .media a {
     color: var(--lightBlue);
 }
 
@@ -79,6 +88,16 @@ header .inner {
     align-items: center;
     padding: 10px 40px;
     justify-content: space-between;
+}
+
+header .inner .logo {
+    display: block;
+    width: 220px;
+}
+
+header .inner .logo img {
+    height: 100%;
+    width: 100%;
 }
 
 header .navbar ul {
@@ -130,8 +149,14 @@ header #menu-bar {
     display: grid;
 }
 
+.hero h1 {
+    font-size: 50px;
+    color: var(--lightBlue);
+    font-family: 'Dancing Script', cursive;
+}
+
 .hero p {
-    font-size: 30px;
+    font-size: 14px;
 }
 
 .hero .inner a button {
@@ -141,7 +166,23 @@ header #menu-bar {
 
 .hero img {
     width: 60%;
-    padding: 0 60px;
+    padding: 40px 60px;
+}
+
+/*......................ABOUT SECTION...................*/
+.about {
+    margin: 50px 0;
+}
+
+.about .inner {
+    min-height: 300px;
+    padding: 30px 350px 30px 40px;
+    display: grid;
+    gap: 5px;
+    color: var(--white);
+    background-image: url("../images/about-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -206,7 +247,14 @@ header #menu-bar {
     .hero img {
         padding: 0 10px;
     }
+
+    /*.....................ABOUT MEDIA STYLES.................*/
+    .about .inner {
+        padding: 30px 50px 30px 20px;
+        min-height: 150px;
+    }
 }
+
 
 @media (max-width: 768px) {
     header .inner img {
@@ -287,6 +335,20 @@ header #menu-bar {
     .hero img {
         width: 300px;
         padding: 0 10px;
+    }
+
+    /*.......................ABOUT MEDIA STYLE....................*/
+    .about .inner {
+        padding: 30px 50px 30px 20px;
+        min-height: 100px;
+    }
+
+    .about .inner h2 {
+        font-size: 20px;
+    }
+
+    .about .inner p {
+        font-size: 12px;
     }
 }
 
