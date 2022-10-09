@@ -67,12 +67,17 @@ button {
 }
 
 /*........................HEADER STYLES........................*/
+header {
+    top: 0;
+    position: sticky;
+    background: var(--white);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
 
 header .inner {
     display: flex;
     align-items: center;
     padding: 10px 40px;
-    position: relative;
     justify-content: space-between;
 }
 
@@ -143,7 +148,8 @@ header #menu-bar {
 /*.......................MEDIA.........................*/
 
 /*.....................HEADER MEDIA STYLES......................*/
-@media (min-width: 1025px) and (max-width: 1440px) {}
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
     header #menu-bar {
