@@ -2,12 +2,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
     list-style-type: none;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 :root {
@@ -36,10 +36,10 @@ button {
 
 .info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 50px;
-    border-bottom: 2px solid var(--borderGray);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--borderGray);
 }
 
 .info .inner {
@@ -67,32 +67,31 @@ button {
 }
 
 /*........................HEADER STYLES........................*/
+header {
+    top: 0;
+    position: sticky;
+    background: var(--white);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
 
 header .inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    margin-top: 20px;
-    position: relative; /*//////avelavcrac*/
+    justify-content: space-between;
 }
 
-header .inner a img {
-    height: 60px;
-    width: 220px;
-}
-
-header .navbar ul{
+header .navbar ul {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 header .navbar ul li {
     padding: 0 15px;
 }
 
-header .navbar ul li a{
+header .navbar ul li a {
     color: var(--black);
 }
 
@@ -100,7 +99,7 @@ header .navbar ul li:hover {
     border-bottom: 2px solid var(--mainBlue);
 }
 
-header .navbar ul li:hover a{
+header .navbar ul li:hover a {
     color: var(--mainBlue);
 }
 
@@ -109,6 +108,7 @@ header #menu-bar {
     font-size: 20px;
     padding: 5px;
     display: none;
+    color: var(--lightBlue);
 }
 
 .hide {
@@ -119,9 +119,8 @@ header #menu-bar {
 
 .hero {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    justify-content: space-between;
 }
 
 .hero .inner {
@@ -149,24 +148,29 @@ header #menu-bar {
 /*.......................MEDIA.........................*/
 
 /*.....................HEADER MEDIA STYLES......................*/
-@media (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     header #menu-bar {
         display: initial;
     }
 
     header .inner img {
-        height: 40px;
-        width: 180px;
+        width: 160px;
+    }
+
+    header .inner {
+        padding: 10px 20px;
     }
 
     header .navbar {
-        position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--white);
-        box-shadow: 1px 1px 1px 1px #000000;
         display: none;
+        position: absolute;
+        background: var(--mainBlue);
     }
 
     header .navbar.active {
@@ -175,9 +179,18 @@ header #menu-bar {
 
     header .navbar ul {
         display: block;
+        padding: 20px 0;
     }
 
-    /*..................SUBHEADER MEDIA STYLES.............*/
+    header .navbar ul li {
+        padding: 8px 35px;
+    }
+
+    header .navbar ul li a {
+        color: var(--white);
+    }
+
+    /*..................HERO MEDIA STYLES.............*/
     .hero {
         margin-top: 0;
     }
@@ -191,18 +204,26 @@ header #menu-bar {
     }
 
     .hero img {
-        height: 300px;
         padding: 0 10px;
     }
 }
 
 @media (max-width: 768px) {
+    header .inner img {
+        width: 160px;
+    }
+
+    header #menu-bar {
+        display: initial;
+    }
+
     .info {
         padding: 10px 20px;
     }
+
     .info .inner {
-        flex-direction: column;
         align-items: start;
+        flex-direction: column;
     }
 
     .info .inner .box {
@@ -214,13 +235,34 @@ header #menu-bar {
         padding: 10px 20px;
     }
 
-    header .inner a img {
-        height: 40px;
-        width: 160px;
+    header .navbar {
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        position: absolute;
+        background: var(--mainBlue);
+    }
+
+    header .navbar.active {
+        display: block;
+    }
+
+    header .navbar ul {
+        display: block;
+        padding: 20px 0;
+    }
+
+    header .navbar ul li {
+        padding: 8px 35px;
+    }
+
+    header .navbar ul li a {
+        color: var(--white);
     }
 
     .hero {
-        margin-top: 0;
+        gap: 20px;
         flex-direction: column-reverse;
     }
 
@@ -243,7 +285,6 @@ header #menu-bar {
     }
 
     .hero img {
-        height: 250px;
         width: 300px;
         padding: 0 10px;
     }
