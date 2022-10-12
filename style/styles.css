@@ -301,7 +301,8 @@ header #menu-bar {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+
     header .inner img {
         width: 160px;
     }
@@ -393,6 +394,21 @@ header #menu-bar {
     }
 
     .about .inner p {
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services .inner .contain img {
+        width: 300px;
+        padding: 0 10px;
+    }
+
+    .services .inner .contain .box ul li {
         font-size: 12px;
     }
 }
