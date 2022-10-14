@@ -25,6 +25,11 @@
     font-family: var(--poppins);
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
 button {
     min-width: 180px;
     padding: 10px 5px;
@@ -177,16 +182,20 @@ header #menu-bar {
 }
 
 .about .inner {
-    min-height: 300px;
-    padding: 30px 350px 30px 40px;
-    display: grid;
-    gap: 5px;
+    gap: 20px;
+    padding: 0 20px;
+    display: flex;
+    height: 500px;
     color: var(--white);
-    background-image: url("../images/about-bg.svg");
+    flex-direction: column;
+    justify-content: center;
+    background: url("../images/about-bg.svg") no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
+.about .inner p {
+    width: 60%;
+}
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -234,6 +243,10 @@ header #menu-bar {
 /*......................................................MEDIA*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+    /*.....................ABOUT MEDIA STYLES.................*/
+    .about .inner p {
+        width: 90%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -295,8 +308,12 @@ header #menu-bar {
 
     /*..................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 150px;
+        background-image: unset;
+        background-color: var(--mainBlue);
+    }
+
+    .about .inner p {
+        width: 90%;
     }
 }
 
@@ -385,8 +402,10 @@ header #menu-bar {
 
     /*.........................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 100px;
+        height: auto;
+        padding: 30px;
+        background-image: unset;
+        background-color: var(--mainBlue);
     }
 
     .about .inner h2 {
@@ -394,6 +413,7 @@ header #menu-bar {
     }
 
     .about .inner p {
+        width: 100%;
         font-size: 12px;
     }
 
