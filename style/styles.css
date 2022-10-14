@@ -1,15 +1,3 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
-}
-
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -21,6 +9,20 @@
     --background: #F5F5F5;
     --borderGray: #d5d4d4;
     --textGray: #5b5a5a;
+
+    --dancingScript: 'Dancing Script', cursive;
+    --poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: var(--poppins);
 }
 
 button {
@@ -32,7 +34,11 @@ button {
     background: none;
 }
 
-/*................INFO STYLES.................*/
+h2 {
+    font-size: 40px;
+}
+
+/*..........................................INFO STYLES*/
 
 .info {
     display: flex;
@@ -59,14 +65,19 @@ button {
 
 .info .inner .box span {
     color: var(--textGray);
+    font-size: 12px;
 }
 
-.info .media i {
-    margin-right: 5px;
+.info .media {
+    display: flex;
+    gap: 20px;
+}
+
+.info .media a {
     color: var(--lightBlue);
 }
 
-/*........................HEADER STYLES........................*/
+/*...........................................HEADER STYLES*/
 header {
     top: 0;
     position: sticky;
@@ -79,6 +90,16 @@ header .inner {
     align-items: center;
     padding: 10px 40px;
     justify-content: space-between;
+}
+
+header .inner .logo {
+    display: block;
+    width: 220px;
+}
+
+header .inner .logo img {
+    height: 100%;
+    width: 100%;
 }
 
 header .navbar ul {
@@ -115,7 +136,7 @@ header #menu-bar {
     display: none !important;
 }
 
-/*...........................HERO STYLES.......................*/
+/*...............................................HERO STYLES*/
 
 .hero {
     display: flex;
@@ -130,8 +151,14 @@ header #menu-bar {
     display: grid;
 }
 
+.hero h1 {
+    font-size: 50px;
+    color: var(--lightBlue);
+    font-family: var(--dancingScript);
+}
+
 .hero p {
-    font-size: 30px;
+    font-size: 14px;
 }
 
 .hero .inner a button {
@@ -141,17 +168,76 @@ header #menu-bar {
 
 .hero img {
     width: 60%;
-    padding: 0 60px;
+    padding: 40px 60px;
+}
+
+/*.............................................ABOUT STYLES*/
+.about {
+    margin: 50px 0;
+}
+
+.about .inner {
+    min-height: 300px;
+    padding: 30px 350px 30px 40px;
+    display: grid;
+    gap: 5px;
+    color: var(--white);
+    background-image: url("../images/about-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-/*.......................MEDIA.........................*/
+/*............................................SERVICES STYLES*/
+.services {
+    min-height: 620px;
+}
 
-/*.....................HEADER MEDIA STYLES......................*/
+.services .inner {
+    padding: 10px 40px;
+}
+
+.services .inner .contain {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+
+.services .inner .contain img {
+    width: 50%;
+}
+
+.services .inner .contain .box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.services .inner .contain .box .include h3 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: var(--mainBlue);
+}
+
+.services .inner .contain .box .include ul{
+    padding-left: 50px;
+}
+
+.services .inner .contain .box .include ul li {
+    list-style-type: disc;
+    padding-bottom: 10px;
+}
+
+
+/*......................................................MEDIA*/
+
 @media (min-width: 1025px) and (max-width: 1440px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+    /*..........................................HEADER MEDIA STYLES*/
     header #menu-bar {
         display: initial;
     }
@@ -190,7 +276,7 @@ header #menu-bar {
         color: var(--white);
     }
 
-    /*..................HERO MEDIA STYLES.............*/
+    /*.................................HERO MEDIA STYLES*/
     .hero {
         margin-top: 0;
     }
@@ -206,9 +292,17 @@ header #menu-bar {
     .hero img {
         padding: 0 10px;
     }
+
+    /*..................................ABOUT MEDIA STYLES*/
+    .about .inner {
+        padding: 30px 50px 30px 20px;
+        min-height: 150px;
+    }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 769px) {
+
     header .inner img {
         width: 160px;
     }
@@ -287,6 +381,35 @@ header #menu-bar {
     .hero img {
         width: 300px;
         padding: 0 10px;
+    }
+
+    /*.........................................ABOUT MEDIA STYLES*/
+    .about .inner {
+        padding: 30px 50px 30px 20px;
+        min-height: 100px;
+    }
+
+    .about .inner h2 {
+        font-size: 20px;
+    }
+
+    .about .inner p {
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services .inner .contain img {
+        width: 300px;
+        padding: 0 10px;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 12px;
     }
 }
 
