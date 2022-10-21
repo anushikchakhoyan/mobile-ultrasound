@@ -187,6 +187,34 @@ header #menu-bar {
     background-repeat: no-repeat;
 }
 
+/*............................................GALLERY STYLES*/
+.gallery {
+    padding: 40px 40px;
+}
+
+.gallery .inner h2 {
+    color: var(--mainBlue);
+    padding-bottom: 20px;
+}
+
+.gallery .inner .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery .inner .box img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    padding: 2px;
+}
+
+.gallery .inner .box img:hover {
+    transform: scale(1.1);
+    transition: all .5s linear;
+}
+
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -298,6 +326,12 @@ header #menu-bar {
         padding: 30px 50px 30px 20px;
         min-height: 150px;
     }
+
+    /*...............................GALLERY MEDIA STYLES*/
+    .gallery .inner .box img {
+        height: 180px;
+        width: 180px;
+    }
 }
 
 
@@ -395,6 +429,12 @@ header #menu-bar {
 
     .about .inner p {
         font-size: 12px;
+    }
+
+    /*.................................GALLERY MEDIA STYLES*/
+    .gallery .inner .box{
+flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
