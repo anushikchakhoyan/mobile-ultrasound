@@ -292,6 +292,50 @@ header #menu-bar {
     width: 350px;
 }
 
+/*.....................................CONTACT US MEDIA*/
+.contact h2 {
+    padding-left: 40px;
+    padding-top: 30px;
+    color: var(--mainBlue);
+}
+
+.contact .inner {
+    display: flex;
+    padding: 40px;
+}
+
+.contact .inner .box {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+
+.contact .inner .box h4 {
+    color: var(--mainBlue);
+    margin-bottom: 5px;
+}
+
+.contact .inner .box a i {
+    font-size: 18px;
+}
+
+.contact .inner .box a .fa-phone {
+    color: var(--iconOrange);
+}
+
+.contact .inner .box a .fa-envelope {
+    color: var(--iconGray);
+}
+
+.contact .inner .box a .fa-location-dot {
+    color: var(--iconGreen);
+}
+
+.contact .inner .box a .fa-earth-americas {
+    color: var(--lightBlue);
+}
+
+
 /*......................................................MEDIA*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -496,12 +540,12 @@ header #menu-bar {
         font-size: 12px;
     }
 
-/*........................................MISSION MEDIA STYLE*/
+    /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         height: 250px;
     }
 
-    .mission .inner .box h2{
+    .mission .inner .box h2 {
         font-size: 20px;
     }
 
@@ -516,5 +560,32 @@ header #menu-bar {
     .mission .inner .empty {
         display: none;
     }
+
+    /*.................................CONTACT US MEDIA STYLES*/
+
+    .contact .inner {
+        padding-top: 20px;
+    }
+
+    .contact h2 {
+        font-size: 20px;
+    }
+
+    .contact .inner {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact .inner .box {
+        flex: none;
+    }
+
+    .contact .inner .box h4 {
+        font-size: 12px;
+    }
+    .contact .inner .box span {
+        font-size: 12px;
+    }
+
 }
 
