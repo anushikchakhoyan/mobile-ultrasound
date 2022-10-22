@@ -25,6 +25,11 @@
     font-family: var(--poppins);
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
 button {
     min-width: 180px;
     padding: 10px 5px;
@@ -36,6 +41,7 @@ button {
 
 h2 {
     font-size: 40px;
+    color: var(--mainBlue);
 }
 
 /*..........................................INFO STYLES*/
