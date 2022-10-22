@@ -249,7 +249,7 @@ header #menu-bar {
     color: var(--mainBlue);
 }
 
-.services .inner .contain .box .include ul{
+.services .inner .contain .box .include ul {
     padding-left: 50px;
 }
 
@@ -258,6 +258,26 @@ header #menu-bar {
     padding-bottom: 10px;
 }
 
+/*.........................................................MISSION STYLES*/
+.mission .inner {
+    padding: 40px;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    background-image: url("../images/mission.svg");
+}
+
+.mission .inner .box h2 {
+    color: var(--mainBlue);
+}
+
+.mission .inner .box {
+    display: grid;
+}
+
+.mission .inner .empty {
+    width: 350px;
+}
 
 /*......................................................MEDIA*/
 
@@ -432,13 +452,13 @@ header #menu-bar {
     }
 
     /*.................................GALLERY MEDIA STYLES*/
-    .gallery .inner .box{
-flex-wrap: wrap;
+    .gallery .inner .box {
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
-    .services .inner .contain{
+    .services .inner .contain {
         flex-direction: column;
         gap: 20px;
     }
@@ -450,6 +470,27 @@ flex-wrap: wrap;
 
     .services .inner .contain .box ul li {
         font-size: 12px;
+    }
+
+/*........................................MISSION MEDIA STYLE*/
+    .mission .inner {
+        height: 250px;
+    }
+
+    .mission .inner .box h2{
+        font-size: 20px;
+    }
+
+    .mission .inner .box p {
+        font-size: 12px;
+    }
+
+    .mission .inner .box {
+        display: grid;
+    }
+
+    .mission .inner .empty {
+        display: none;
     }
 }
 
