@@ -215,6 +215,13 @@ header #menu-bar {
     transition: all .5s linear;
 }
 
+.about .inner p {
+    width: 60%;
+}
+
+.about .inner h2 {
+    color: var(--white);
+}
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -326,6 +333,10 @@ header #menu-bar {
 /*......................................................MEDIA*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+    /*.....................ABOUT MEDIA STYLES.................*/
+    .about .inner p {
+        width: 90%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -387,8 +398,12 @@ header #menu-bar {
 
     /*..................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 150px;
+        background-image: unset;
+        background-color: var(--mainBlue);
+    }
+
+    .about .inner p {
+        width: 90%;
     }
 
     /*...............................GALLERY MEDIA STYLES*/
@@ -452,7 +467,7 @@ header #menu-bar {
     header .navbar ul li a {
         color: var(--white);
     }
-
+/*..................................................HERO MEDIA STYLES*/
     .hero {
         gap: 20px;
         flex-direction: column-reverse;
@@ -483,8 +498,10 @@ header #menu-bar {
 
     /*.........................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 100px;
+        height: auto;
+        padding: 30px;
+        background-image: unset;
+        background-color: var(--mainBlue);
     }
 
     .about .inner h2 {
@@ -492,6 +509,7 @@ header #menu-bar {
     }
 
     .about .inner p {
+        width: 100%;
         font-size: 12px;
     }
 
