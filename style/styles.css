@@ -25,11 +25,6 @@
     font-family: var(--poppins);
 }
 
-main {
-    margin: 0 auto;
-    max-width: 1920px;
-}
-
 button {
     min-width: 180px;
     padding: 10px 5px;
@@ -41,7 +36,6 @@ button {
 
 h2 {
     font-size: 40px;
-    color: var(--mainBlue);
 }
 
 /*..........................................INFO STYLES*/
@@ -193,13 +187,34 @@ header #menu-bar {
     background-repeat: no-repeat;
 }
 
-.about .inner p {
-    width: 60%;
+/*............................................GALLERY STYLES*/
+.gallery {
+    padding: 40px 40px;
 }
 
-.about .inner h2 {
-    color: var(--white);
+.gallery .inner h2 {
+    color: var(--mainBlue);
+    padding-bottom: 20px;
 }
+
+.gallery .inner .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery .inner .box img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    padding: 2px;
+}
+
+.gallery .inner .box img:hover {
+    transform: scale(1.1);
+    transition: all .5s linear;
+}
+
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -339,6 +354,12 @@ header #menu-bar {
     .about .inner p {
         width: 90%;
     }
+
+    /*...............................GALLERY MEDIA STYLES*/
+    .gallery .inner .box img {
+        height: 180px;
+        width: 180px;
+    }
 }
 
 
@@ -439,6 +460,12 @@ header #menu-bar {
     .about .inner p {
         width: 100%;
         font-size: 12px;
+    }
+
+    /*.................................GALLERY MEDIA STYLES*/
+    .gallery .inner .box{
+flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
