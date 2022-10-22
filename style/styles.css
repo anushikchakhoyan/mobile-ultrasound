@@ -25,6 +25,11 @@
     font-family: var(--poppins);
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
 button {
     min-width: 180px;
     padding: 10px 5px;
@@ -36,6 +41,7 @@ button {
 
 h2 {
     font-size: 40px;
+    color: var(--mainBlue);
 }
 
 /*..........................................INFO STYLES*/
@@ -215,6 +221,13 @@ header #menu-bar {
     transition: all .5s linear;
 }
 
+.about .inner p {
+    width: 60%;
+}
+
+.about .inner h2 {
+    color: var(--white);
+}
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -249,7 +262,7 @@ header #menu-bar {
     color: var(--mainBlue);
 }
 
-.services .inner .contain .box .include ul{
+.services .inner .contain .box .include ul {
     padding-left: 50px;
 }
 
@@ -258,26 +271,26 @@ header #menu-bar {
     padding-bottom: 10px;
 }
 
-/*...........................................OUR MISSION SECTION*/
-.mission {
-    display: flex;
-    background-image: url("../images/mission-bg.svg");
-    height: 300px;
-}
-
-.mission .box {
-    width: 100%;
-}
-
+/*.........................................................MISSION STYLES*/
 .mission .inner {
+    padding: 40px;
+    height: 300px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    gap: 20px;
+    background-image: url("../images/mission.svg");
 }
 
+.mission .inner .box h2 {
+    color: var(--mainBlue);
+}
 
+.mission .inner .box {
+    display: grid;
+}
 
+.mission .inner .empty {
+    width: 350px;
+}
 
 /*......................................................MEDIA*/
 
@@ -463,13 +476,13 @@ header #menu-bar {
     }
 
     /*.................................GALLERY MEDIA STYLES*/
-    .gallery .inner .box{
-flex-wrap: wrap;
+    .gallery .inner .box {
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
-    .services .inner .contain{
+    .services .inner .contain {
         flex-direction: column;
         gap: 20px;
     }
@@ -483,25 +496,25 @@ flex-wrap: wrap;
         font-size: 12px;
     }
 
-    /*.............................................OUR MISSION MEDIA STYLES*/
-    .mission {
-        height: 200px;
-    }
-
-    .mission .box{
-        display: none;
-    }
-
+/*........................................MISSION MEDIA STYLE*/
     .mission .inner {
-        padding: 0 20px;
+        height: 250px;
     }
 
-    .mission .inner h2 {
+    .mission .inner .box h2{
         font-size: 20px;
     }
 
-    .mission .inner p {
+    .mission .inner .box p {
         font-size: 12px;
+    }
+
+    .mission .inner .box {
+        display: grid;
+    }
+
+    .mission .inner .empty {
+        display: none;
     }
 }
 
