@@ -258,10 +258,34 @@ header #menu-bar {
     padding-bottom: 10px;
 }
 
+/*...........................................OUR MISSION SECTION*/
+.mission {
+    display: flex;
+    background-image: url("../images/mission-bg.svg");
+    height: 300px;
+}
+
+.mission .box {
+    width: 100%;
+}
+
+.mission .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
 
 /*......................................................MEDIA*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+    /*.....................ABOUT MEDIA STYLES.................*/
+    .about .inner p {
+        width: 90%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -323,8 +347,12 @@ header #menu-bar {
 
     /*..................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 150px;
+        background-image: unset;
+        background-color: var(--mainBlue);
+    }
+
+    .about .inner p {
+        width: 90%;
     }
 
     /*...............................GALLERY MEDIA STYLES*/
@@ -388,7 +416,7 @@ header #menu-bar {
     header .navbar ul li a {
         color: var(--white);
     }
-
+/*..................................................HERO MEDIA STYLES*/
     .hero {
         gap: 20px;
         flex-direction: column-reverse;
@@ -419,8 +447,10 @@ header #menu-bar {
 
     /*.........................................ABOUT MEDIA STYLES*/
     .about .inner {
-        padding: 30px 50px 30px 20px;
-        min-height: 100px;
+        height: auto;
+        padding: 30px;
+        background-image: unset;
+        background-color: var(--mainBlue);
     }
 
     .about .inner h2 {
@@ -428,6 +458,7 @@ header #menu-bar {
     }
 
     .about .inner p {
+        width: 100%;
         font-size: 12px;
     }
 
@@ -449,6 +480,27 @@ flex-wrap: wrap;
     }
 
     .services .inner .contain .box ul li {
+        font-size: 12px;
+    }
+
+    /*.............................................OUR MISSION MEDIA STYLES*/
+    .mission {
+        height: 200px;
+    }
+
+    .mission .box{
+        display: none;
+    }
+
+    .mission .inner {
+        padding: 0 20px;
+    }
+
+    .mission .inner h2 {
+        font-size: 20px;
+    }
+
+    .mission .inner p {
         font-size: 12px;
     }
 }
