@@ -336,6 +336,47 @@ header #menu-bar {
 }
 
 
+/*...........................................................FOOTER STYLES*/
+.footer {
+    background-color: var(--mainBlue);
+    color: var(--white);
+}
+
+.footer i {
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 150px;
+}
+
+.footer .inner .box {
+    display: grid;
+    gap: 20px;
+}
+
+.footer .inner .box p {
+    font-size: 11px;
+}
+
+.footer .inner .box a img {
+    width: 150px;
+}
+
+.footer .inner .box a {
+    color: var(--white);
+    font-size: 11px;
+}
+
+.footer .inner .box ul li {
+    padding-bottom: 10px;
+}
+
+
 /*......................................................MEDIA*/
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -473,7 +514,8 @@ header #menu-bar {
     header .navbar ul li a {
         color: var(--white);
     }
-/*..................................................HERO MEDIA STYLES*/
+
+    /*..................................................HERO MEDIA STYLES*/
     .hero {
         gap: 20px;
         flex-direction: column-reverse;
@@ -562,7 +604,6 @@ header #menu-bar {
     }
 
     /*.................................CONTACT US MEDIA STYLES*/
-
     .contact .inner {
         padding-top: 20px;
     }
@@ -583,8 +624,17 @@ header #menu-bar {
     .contact .inner .box h4 {
         font-size: 12px;
     }
+
     .contact .inner .box span {
         font-size: 12px;
+    }
+
+    .footer .inner .navigation {
+        display: none;
+    }
+
+    .footer .inner {
+        padding: 10px;
     }
 
 }
