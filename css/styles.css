@@ -205,6 +205,34 @@ header #menu-bar {
     color: var(--white);
 }
 
+/*.........................................LIMITATION STYLES*/
+.limitation .inner h2 {
+    padding-left: 40px;
+}
+
+.limitation .inner .box {
+    display: flex;
+    padding: 20px 40px 40px 40px;
+    text-align: center;
+    gap: 50px;
+}
+
+.limitation .inner .box p, .contain p {
+    padding: 20px;
+}
+
+.limitation .inner .contain {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+}
+
+.limitation .inner .box p:hover, .contain:hover {
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+
 /*............................................GALLERY STYLES*/
 .gallery {
     padding: 20px;
@@ -571,6 +599,22 @@ header #menu-bar {
         width: 100%;
         font-size: 12px;
     }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .limitation .inner .contain {
+        padding: 0 20px 0 20px;
+    }
+
+    .limitation .inner .box p, .contain p {
+        font-size: 12px;
+    }
+
 
     /*.................................GALLERY MEDIA STYLES*/
     .gallery .inner .box img {
