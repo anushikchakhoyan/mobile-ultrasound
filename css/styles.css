@@ -650,7 +650,7 @@ header #menu-bar {
     .footer .inner {
         flex-direction: column;
         padding: 10px;
-        gap: 20px;
+        gap: 21px;
     }
 
     .footer .inner .box {
