@@ -7,8 +7,8 @@
     --iconOrange: #dba94c;
     --iconGray: #9a9999;
     --background: #F5F5F5;
-    --borderGray: #d5d4d4;
     --textGray: #5b5a5a;
+    --lightestBlue: 235, 244, 248;
 
     --secondaryFontFamily: 'Dancing Script', cursive;
     --baseFontFamily: 'Poppins', sans-serif;
@@ -181,10 +181,6 @@ header #menu-bar {
 }
 
 /*.............................................ABOUT STYLES*/
-.about {
-    margin: 50px 0;
-}
-
 .about .inner {
     gap: 30px;
     display: flex;
@@ -204,6 +200,42 @@ header #menu-bar {
 .about .inner h2 {
     color: var(--white);
 }
+
+/*.........................................LIMITATION STYLES*/
+.limitation .inner {
+    gap: 40px;
+    padding: 20px;
+    display: grid;
+}
+
+.limitation .inner .box {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.limitation .inner .box p {
+    letter-spacing: 0.05em;
+}
+
+.limitation .inner .box .contain {
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    min-height: 220px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    border: 2px solid rgb(var(--lightestBlue));
+}
+
+.limitation .inner .box .contain:hover {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
 
 /*............................................GALLERY STYLES*/
 .gallery {
@@ -394,6 +426,11 @@ header #menu-bar {
         width: 90%;
     }
 
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .contain p {
+        font-size: 14px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -456,6 +493,16 @@ header #menu-bar {
 
     .about .inner p, .mission .inner p {
         width: 90%;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
     }
 
     /*........................................MISSION MEDIA STYLE*/
@@ -571,6 +618,17 @@ header #menu-bar {
         width: 100%;
         font-size: 12px;
     }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
 
     /*.................................GALLERY MEDIA STYLES*/
     .gallery .inner .box img {
