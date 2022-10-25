@@ -7,7 +7,7 @@
     --iconOrange: #dba94c;
     --iconGray: #9a9999;
     --background: #F5F5F5;
-    --borderGray: #d5d4d4;
+    --borderColor: #EBF4F8;
     --textGray: #5b5a5a;
 
     --secondaryFontFamily: 'Dancing Script', cursive;
@@ -181,10 +181,6 @@ header #menu-bar {
 }
 
 /*.............................................ABOUT STYLES*/
-.about {
-    margin: 50px 0;
-}
-
 .about .inner {
     gap: 30px;
     display: flex;
@@ -206,30 +202,38 @@ header #menu-bar {
 }
 
 /*.........................................LIMITATION STYLES*/
-.limitation .inner h2 {
-    padding-left: 40px;
+.limitation .inner {
+    gap: 40px;
+    padding: 20px;
+    display: grid;
 }
 
 .limitation .inner .box {
+    gap: 10px;
     display: flex;
-    padding: 20px 40px 40px 40px;
-    text-align: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.limitation .inner .box p, .contain p {
+.limitation .inner .box p {
+    letter-spacing: 0.05em;
+}
+
+.limitation .inner .box .contain {
+    width: 45%;
+    display: flex;
     padding: 20px;
-}
-
-.limitation .inner .contain {
-    margin: 0 auto;
+    min-height: 220px;
     text-align: center;
-    width: 500px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    border: 2px solid var(--borderColor);
 }
 
-.limitation .inner .box p:hover, .contain:hover {
-    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .1);
-    border-radius: 10px;
+.limitation .inner .box .contain:hover {
+    background-color: var(--borderColor);
 }
 
 
@@ -422,6 +426,11 @@ header #menu-bar {
         width: 90%;
     }
 
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .contain p {
+        font-size: 14px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -484,6 +493,16 @@ header #menu-bar {
 
     .about .inner p, .mission .inner p {
         width: 90%;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
     }
 
     /*........................................MISSION MEDIA STYLE*/
@@ -601,17 +620,12 @@ header #menu-bar {
     }
 
     /*.........................................LIMITATION MEDIA STYLES*/
-    .limitation .inner .box {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
     }
 
-    .limitation .inner .contain {
-        padding: 0 20px 0 20px;
-    }
-
-    .limitation .inner .box p, .contain p {
+    .limitation .inner .contain p {
         font-size: 12px;
     }
 
