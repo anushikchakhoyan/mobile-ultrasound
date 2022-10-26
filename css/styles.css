@@ -9,6 +9,7 @@
     --background: #F5F5F5;
     --textGray: #5b5a5a;
     --lightestBlue: 235, 244, 248;
+    --lightestGray: 239, 239, 240;
 
     --secondaryFontFamily: 'Dancing Script', cursive;
     --baseFontFamily: 'Poppins', sans-serif;
@@ -317,6 +318,37 @@ header #menu-bar {
     transform: scale(1.1);
     transition: all .5s linear;
 }
+
+/*...........................................BENEFITS STYLES*/
+.benefits {
+    padding: 40px;
+}
+
+.benefits .inner {
+    padding: 20px 40px 20px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefits .inner .box-left {
+    display: flex;
+    align-self: flex-start;
+    width: 80%;
+    background-color: rgba(var(--lightestBlue), 1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.benefits .inner .box-right {
+    display: flex;
+    align-self: flex-end;
+    width: 80%;
+    background-color: rgba(var(--lightestGray), 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
 
 /*............................................SERVICES STYLES*/
 .services {
@@ -695,6 +727,20 @@ header #menu-bar {
     .gallery .inner .box img {
         width: 100px;
         height: 100px;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits {
+        padding: 20px;
+    }
+
+    .benefits h2 {
+        font-size: 20px;
+    }
+
+    .benefits .inner {
+        padding: 10px;
+        font-size: 12px;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
