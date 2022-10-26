@@ -7,8 +7,9 @@
     --iconOrange: #dba94c;
     --iconGray: #9a9999;
     --background: #F5F5F5;
-    --borderGray: #d5d4d4;
     --textGray: #5b5a5a;
+    --lightestBlue: 235, 244, 248;
+    --lightestGray: 239, 239, 240;
 
     --secondaryFontFamily: 'Dancing Script', cursive;
     --baseFontFamily: 'Poppins', sans-serif;
@@ -181,15 +182,11 @@ header #menu-bar {
 }
 
 /*.............................................ABOUT STYLES*/
-.about {
-    margin: 50px 0;
-}
-
 .about .inner {
     gap: 30px;
     display: flex;
-    min-height: 530px;
-    padding: 30px 50px;
+    min-height: 450px;
+    padding: 0 50px;
     color: var(--white);
     flex-direction: column;
     justify-content: center;
@@ -204,6 +201,102 @@ header #menu-bar {
 .about .inner h2 {
     color: var(--white);
 }
+
+/*.........................................LIMITATION STYLES*/
+.limitation .inner {
+    gap: 40px;
+    padding: 20px;
+    display: grid;
+}
+
+.limitation .inner .box {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.limitation .inner .box p {
+    letter-spacing: 0.05em;
+}
+
+.limitation .inner .box .contain {
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    min-height: 220px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    border: 2px solid rgb(var(--lightestBlue));
+}
+
+.limitation .inner .box .contain:hover {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
+/*............................................WE ARE SECTION*/
+.we-are .inner {
+    position: relative;
+}
+
+.we-are .inner .contain {
+    display: flex;
+}
+
+.we-are .inner img {
+    left: 0;
+    z-index: 2;
+    bottom: 0;
+    right: 40px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.we-are .inner .box-we-are {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
+.we-are .inner .box-we-are,
+.we-are .inner .box-we-offer {
+    flex: 1;
+    gap: 50px;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.we-are .inner .box-we-are h2 {
+    text-align: center;
+}
+
+.we-are .inner .box-we-are  ul li,
+.we-are .inner .box-we-offer ul li {
+    list-style-type: disc;
+    padding-bottom: 30px;
+}
+
+.we-are .inner ul {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.we-are .inner .box-we-offer {
+    background-color: var(--mainBlue);
+}
+
+.we-are .inner .box-we-offer h2 {
+    text-align: center;
+    color: var(--white);
+}
+
+.we-are .inner .box-we-offer ul li {
+    color: var(--white);
+}
+
 
 /*............................................GALLERY STYLES*/
 .gallery {
@@ -234,20 +327,48 @@ header #menu-bar {
     transition: all .5s linear;
 }
 
-/*............................................SERVICES STYLES*/
-.services {
-    min-height: 620px;
+/*...........................................BENEFITS STYLES*/
+.benefits {
+    padding: 20px;
 }
 
-.services .inner {
-    padding: 10px 40px;
+.benefits .inner {
+    gap: 20px;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefits .inner .box {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.benefits .inner .box.left {
+    align-self: flex-start;
+    background-color: rgba(var(--lightestBlue), 1);
+}
+
+.benefits .inner .box.right {
+    align-self: flex-end;
+    background-color: rgba(var(--lightestGray), 0.8);
+}
+
+
+/*............................................SERVICES STYLES*/
+.services {
+    padding: 20px;
 }
 
 .services .inner .contain {
+    gap: 40px;
     display: flex;
-    justify-content: start;
+    padding-top: 20px;
     align-items: center;
-    gap: 100px;
+    justify-content: start;
 }
 
 .services .inner .contain img {
@@ -255,23 +376,26 @@ header #menu-bar {
 }
 
 .services .inner .contain .box {
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 30px;
 }
 
 .services .inner .contain .box .include h3 {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
     color: var(--mainBlue);
 }
 
 .services .inner .contain .box .include ul {
+    column-count: 2;
     padding-left: 50px;
+    break-after: column;
+    list-style-position: outside;
 }
 
 .services .inner .contain .box .include ul li {
+    font-size: 14px;
     list-style-type: disc;
     padding-bottom: 10px;
 }
@@ -396,6 +520,12 @@ header #menu-bar {
 
 
 /*......................................................MEDIA*/
+@media (min-width: 1500px) {
+    .about .inner,
+    .mission .inner {
+        min-height: 550px;
+    }
+}
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     /*.....................ABOUT MEDIA STYLES.................*/
@@ -407,6 +537,17 @@ header #menu-bar {
 
     .about .inner p, .mission .inner p {
         width: 90%;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .contain p {
+        font-size: 14px;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 70%;
+        font-size: 12px;
     }
 
     /*........................................MISSION MEDIA STYLE*/
@@ -473,6 +614,49 @@ header #menu-bar {
         width: 90%;
     }
 
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
+    /*............................................WE ARE MEDIA STYLES*/
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
+    justify-content: start;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain img {
+        display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 16px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 2;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 14px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -480,7 +664,6 @@ header #menu-bar {
         background-size: 100% 100%;
     }
 }
-
 
 @media (max-width: 769px) {
     /*...............................GLOBAL MEDIA STYLES*/
@@ -490,8 +673,7 @@ header #menu-bar {
 
     .mission .inner,
     .about .inner,
-    .contact .inner,
-    .services .inner {
+    .contact .inner {
         padding: 20px;
     }
 
@@ -587,19 +769,57 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
+    /*......................................WE ARE MEDIA STYLES*/
+    .we-are .inner .contain {
+        flex-direction: column;
+    }
+
+    .we-are .inner .box-we-are, .box-we-offer {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    .we-are .inner img {
+        display: none;
+    }
+
     /*.................................GALLERY MEDIA STYLES*/
     .gallery .inner .box img {
         width: 100px;
         height: 100px;
     }
 
-    /*........................................SERVICE MEDIA STYLES*/
-    .services .inner .contain {
-        flex-direction: column;
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 100%;
+        font-size: 12px;
     }
 
+    /*........................................SERVICE MEDIA STYLES*/
     .services .inner .contain img {
         display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 14px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 1;
     }
 
     .services .inner .contain .box ul li {
