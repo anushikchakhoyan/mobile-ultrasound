@@ -185,8 +185,8 @@ header #menu-bar {
 .about .inner {
     gap: 30px;
     display: flex;
-    min-height: 530px;
-    padding: 30px 50px;
+    min-height: 450px;
+    padding: 0 50px;
     color: var(--white);
     flex-direction: column;
     justify-content: center;
@@ -238,39 +238,50 @@ header #menu-bar {
 }
 
 /*............................................WE ARE SECTION*/
-.we-are {
-    min-height: 450px;
+.we-are .inner {
+    position: relative;
 }
 
 .we-are .inner .contain {
     display: flex;
-    position: absolute;
 }
 
 .we-are .inner img {
+    left: 0;
     z-index: 2;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    bottom: 0;
+    right: 40px;
+    margin: 0 auto;
+    position: absolute;
 }
 
 .we-are .inner .box-we-are {
     background-color: rgba(var(--lightestBlue), 0.5);
 }
 
-.we-are .inner .box-we-are, .box-we-offer {
-    width: 50%;
+.we-are .inner .box-we-are,
+.we-are .inner .box-we-offer {
+    flex: 1;
+    gap: 50px;
+    display: flex;
     padding: 50px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .we-are .inner .box-we-are h2 {
     text-align: center;
 }
 
-.we-are .inner .box-we-are ul li {
+.we-are .inner .box-we-are  ul li,
+.we-are .inner .box-we-offer ul li {
     list-style-type: disc;
     padding-bottom: 30px;
+}
+
+.we-are .inner ul {
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 .we-are .inner .box-we-offer {
@@ -280,12 +291,9 @@ header #menu-bar {
 .we-are .inner .box-we-offer h2 {
     text-align: center;
     color: var(--white);
-
 }
 
 .we-are .inner .box-we-offer ul li {
-    list-style-type: disc;
-    padding-bottom: 30px;
     color: var(--white);
 }
 
@@ -321,49 +329,46 @@ header #menu-bar {
 
 /*...........................................BENEFITS STYLES*/
 .benefits {
-    padding: 40px;
+    padding: 20px;
 }
 
 .benefits .inner {
-    padding: 20px 40px 20px 200px;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.benefits .inner .box-left {
-    display: flex;
+.benefits .inner .box {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.benefits .inner .box.left {
     align-self: flex-start;
-    width: 80%;
     background-color: rgba(var(--lightestBlue), 1);
-    border-radius: 10px;
-    padding: 10px;
 }
 
-.benefits .inner .box-right {
-    display: flex;
+.benefits .inner .box.right {
     align-self: flex-end;
-    width: 80%;
     background-color: rgba(var(--lightestGray), 0.8);
-    border-radius: 10px;
-    padding: 10px;
 }
 
 
 /*............................................SERVICES STYLES*/
 .services {
-    min-height: 620px;
-}
-
-.services .inner {
-    padding: 10px 40px;
+    padding: 20px;
 }
 
 .services .inner .contain {
+    gap: 40px;
     display: flex;
-    justify-content: start;
+    padding-top: 20px;
     align-items: center;
-    gap: 100px;
+    justify-content: start;
 }
 
 .services .inner .contain img {
@@ -371,23 +376,26 @@ header #menu-bar {
 }
 
 .services .inner .contain .box {
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 30px;
 }
 
 .services .inner .contain .box .include h3 {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
     color: var(--mainBlue);
 }
 
 .services .inner .contain .box .include ul {
+    column-count: 2;
     padding-left: 50px;
+    break-after: column;
+    list-style-position: outside;
 }
 
 .services .inner .contain .box .include ul li {
+    font-size: 14px;
     list-style-type: disc;
     padding-bottom: 10px;
 }
@@ -497,6 +505,12 @@ header #menu-bar {
 
 
 /*......................................................MEDIA*/
+@media (min-width: 1500px) {
+    .about .inner,
+    .mission .inner {
+        min-height: 550px;
+    }
+}
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     /*.....................ABOUT MEDIA STYLES.................*/
@@ -513,6 +527,12 @@ header #menu-bar {
     /*.........................................LIMITATION MEDIA STYLES*/
     .limitation .inner .contain p {
         font-size: 14px;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 70%;
+        font-size: 12px;
     }
 
     /*........................................MISSION MEDIA STYLE*/
@@ -589,6 +609,39 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*............................................WE ARE MEDIA STYLES*/
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
+    justify-content: start;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain img {
+        display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 16px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 2;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 14px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -596,7 +649,6 @@ header #menu-bar {
         background-size: 100% 100%;
     }
 }
-
 
 @media (max-width: 769px) {
     /*...............................GLOBAL MEDIA STYLES*/
@@ -606,8 +658,7 @@ header #menu-bar {
 
     .mission .inner,
     .about .inner,
-    .contact .inner,
-    .services .inner {
+    .contact .inner {
         padding: 20px;
     }
 
@@ -723,6 +774,14 @@ header #menu-bar {
         padding: 20px 30px;
     }
 
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    .we-are .inner img {
+        display: none;
+    }
+
     /*.................................GALLERY MEDIA STYLES*/
     .gallery .inner .box img {
         width: 100px;
@@ -730,26 +789,22 @@ header #menu-bar {
     }
 
     /*...................................BENEFITS MEDIA STYLES*/
-    .benefits {
-        padding: 20px;
-    }
-
-    .benefits h2 {
-        font-size: 20px;
-    }
-
     .benefits .inner {
-        padding: 10px;
+        width: 100%;
         font-size: 12px;
     }
 
     /*........................................SERVICE MEDIA STYLES*/
-    .services .inner .contain {
-        flex-direction: column;
-    }
-
     .services .inner .contain img {
         display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 14px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 1;
     }
 
     .services .inner .contain .box ul li {
