@@ -769,7 +769,8 @@ header #menu-bar {
         flex-direction: column;
     }
 
-    .we-are .inner .box-we-are, .box-we-offer {
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
         width: 100%;
         padding: 20px 30px;
     }
