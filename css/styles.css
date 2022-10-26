@@ -478,7 +478,7 @@ header #menu-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 150px;
+    padding: 65px 65px;
 }
 
 .footer .inner .box {
@@ -501,6 +501,21 @@ header #menu-bar {
 
 .footer .inner .box ul li {
     padding-bottom: 10px;
+}
+
+.footer .inner .box .media i {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(50, 115, 220, 0.3);
+}
+
+.footer .inner .navigation div {
+    display: flex;
+    gap: 35px;
+}
+
+.footer .inner .logo-contain {
+    flex: .5;
 }
 
 
@@ -853,12 +868,19 @@ header #menu-bar {
         font-size: 12px;
     }
 
-    .footer .inner .navigation {
-        display: none;
+    .footer .inner {
+        flex-direction: column;
+        padding: 10px;
+        gap: 21px;
     }
 
-    .footer .inner {
-        padding: 10px;
+    .footer .inner .box {
+        width: 90%;
+        gap: 5px;
+    }
+
+    .footer .inner .box h3 {
+        font-size: 14px;
     }
 
 }
