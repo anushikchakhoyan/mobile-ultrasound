@@ -321,32 +321,32 @@ header #menu-bar {
 
 /*...........................................BENEFITS STYLES*/
 .benefits {
-    padding: 40px;
+    padding: 20px;
 }
 
 .benefits .inner {
-    padding: 20px 40px 20px 200px;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.benefits .inner .box-left {
-    display: flex;
+.benefits .inner .box {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.benefits .inner .box.left {
     align-self: flex-start;
-    width: 80%;
     background-color: rgba(var(--lightestBlue), 1);
-    border-radius: 10px;
-    padding: 10px;
 }
 
-.benefits .inner .box-right {
-    display: flex;
+.benefits .inner .box.right {
     align-self: flex-end;
-    width: 80%;
     background-color: rgba(var(--lightestGray), 0.8);
-    border-radius: 10px;
-    padding: 10px;
 }
 
 
@@ -515,6 +515,12 @@ header #menu-bar {
         font-size: 14px;
     }
 
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 70%;
+        font-size: 12px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -586,6 +592,13 @@ header #menu-bar {
     }
 
     .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 90%;
         font-size: 12px;
     }
 
@@ -730,16 +743,8 @@ header #menu-bar {
     }
 
     /*...................................BENEFITS MEDIA STYLES*/
-    .benefits {
-        padding: 20px;
-    }
-
-    .benefits h2 {
-        font-size: 20px;
-    }
-
     .benefits .inner {
-        padding: 10px;
+        width: 100%;
         font-size: 12px;
     }
 
