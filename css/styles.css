@@ -185,8 +185,8 @@ header #menu-bar {
 .about .inner {
     gap: 30px;
     display: flex;
-    min-height: 530px;
-    padding: 30px 50px;
+    min-height: 450px;
+    padding: 0 50px;
     color: var(--white);
     flex-direction: column;
     justify-content: center;
@@ -352,18 +352,15 @@ header #menu-bar {
 
 /*............................................SERVICES STYLES*/
 .services {
-    min-height: 620px;
-}
-
-.services .inner {
-    padding: 10px 40px;
+    padding: 20px;
 }
 
 .services .inner .contain {
+    gap: 40px;
     display: flex;
-    justify-content: start;
+    padding-top: 20px;
     align-items: center;
-    gap: 100px;
+    justify-content: start;
 }
 
 .services .inner .contain img {
@@ -371,23 +368,26 @@ header #menu-bar {
 }
 
 .services .inner .contain .box {
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 30px;
 }
 
 .services .inner .contain .box .include h3 {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
     color: var(--mainBlue);
 }
 
 .services .inner .contain .box .include ul {
+    column-count: 2;
     padding-left: 50px;
+    break-after: column;
+    list-style-position: outside;
 }
 
 .services .inner .contain .box .include ul li {
+    font-size: 14px;
     list-style-type: disc;
     padding-bottom: 10px;
 }
@@ -602,6 +602,23 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain img {
+        display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 16px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 2;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 14px;
+    }
+
     /*........................................MISSION MEDIA STYLE*/
     .mission .inner {
         background: url(../images/mission/mission-bg-md.png) no-repeat;
@@ -619,8 +636,7 @@ header #menu-bar {
 
     .mission .inner,
     .about .inner,
-    .contact .inner,
-    .services .inner {
+    .contact .inner {
         padding: 20px;
     }
 
@@ -749,12 +765,16 @@ header #menu-bar {
     }
 
     /*........................................SERVICE MEDIA STYLES*/
-    .services .inner .contain {
-        flex-direction: column;
-    }
-
     .services .inner .contain img {
         display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 14px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 1;
     }
 
     .services .inner .contain .box ul li {
