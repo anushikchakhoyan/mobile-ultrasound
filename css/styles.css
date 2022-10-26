@@ -236,6 +236,58 @@ header #menu-bar {
     background-color: rgba(var(--lightestBlue), 0.5);
 }
 
+/*............................................WE ARE SECTION*/
+.we-are {
+    min-height: 450px;
+}
+
+.we-are .inner .contain {
+    display: flex;
+    position: absolute;
+}
+
+.we-are .inner img {
+    z-index: 2;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.we-are .inner .box-we-are {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
+.we-are .inner .box-we-are, .box-we-offer {
+    width: 50%;
+    padding: 50px;
+}
+
+.we-are .inner .box-we-are h2 {
+    text-align: center;
+}
+
+.we-are .inner .box-we-are ul li {
+    list-style-type: disc;
+    padding-bottom: 30px;
+}
+
+.we-are .inner .box-we-offer {
+    background-color: var(--mainBlue);
+}
+
+.we-are .inner .box-we-offer h2 {
+    text-align: center;
+    color: var(--white);
+
+}
+
+.we-are .inner .box-we-offer ul li {
+    list-style-type: disc;
+    padding-bottom: 30px;
+    color: var(--white);
+}
+
 
 /*............................................GALLERY STYLES*/
 .gallery {
@@ -629,6 +681,15 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*......................................WE ARE MEDIA STYLES*/
+    .we-are .inner .contain {
+        flex-direction: column;
+    }
+
+    .we-are .inner .box-we-are, .box-we-offer {
+        width: 100%;
+        padding: 20px 30px;
+    }
 
     /*.................................GALLERY MEDIA STYLES*/
     .gallery .inner .box img {
