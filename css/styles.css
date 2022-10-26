@@ -238,39 +238,50 @@ header #menu-bar {
 }
 
 /*............................................WE ARE SECTION*/
-.we-are {
-    min-height: 450px;
+.we-are .inner {
+    position: relative;
 }
 
 .we-are .inner .contain {
     display: flex;
-    position: absolute;
 }
 
 .we-are .inner img {
+    left: 0;
     z-index: 2;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    bottom: 0;
+    right: 40px;
+    margin: 0 auto;
+    position: absolute;
 }
 
 .we-are .inner .box-we-are {
     background-color: rgba(var(--lightestBlue), 0.5);
 }
 
-.we-are .inner .box-we-are, .box-we-offer {
-    width: 50%;
+.we-are .inner .box-we-are,
+.we-are .inner .box-we-offer {
+    flex: 1;
+    gap: 50px;
+    display: flex;
     padding: 50px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .we-are .inner .box-we-are h2 {
     text-align: center;
 }
 
-.we-are .inner .box-we-are ul li {
+.we-are .inner .box-we-are  ul li,
+.we-are .inner .box-we-offer ul li {
     list-style-type: disc;
     padding-bottom: 30px;
+}
+
+.we-are .inner ul {
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 .we-are .inner .box-we-offer {
@@ -280,12 +291,9 @@ header #menu-bar {
 .we-are .inner .box-we-offer h2 {
     text-align: center;
     color: var(--white);
-
 }
 
 .we-are .inner .box-we-offer ul li {
-    list-style-type: disc;
-    padding-bottom: 30px;
     color: var(--white);
 }
 
@@ -497,6 +505,12 @@ header #menu-bar {
 
 
 /*......................................................MEDIA*/
+@media (min-width: 1500px) {
+    .about .inner,
+    .mission .inner {
+        min-height: 550px;
+    }
+}
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     /*.....................ABOUT MEDIA STYLES.................*/
@@ -595,6 +609,15 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*............................................WE ARE MEDIA STYLES*/
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
+    justify-content: start;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
 
     /*...................................BENEFITS MEDIA STYLES*/
     .benefits .inner {
@@ -626,7 +649,6 @@ header #menu-bar {
         background-size: 100% 100%;
     }
 }
-
 
 @media (max-width: 769px) {
     /*...............................GLOBAL MEDIA STYLES*/
@@ -750,6 +772,14 @@ header #menu-bar {
     .we-are .inner .box-we-are, .box-we-offer {
         width: 100%;
         padding: 20px 30px;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    .we-are .inner img {
+        display: none;
     }
 
     /*.................................GALLERY MEDIA STYLES*/
