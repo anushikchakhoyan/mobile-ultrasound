@@ -1,0 +1,887 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --mainBlue: #14457B;
+    --lightBlue: #3fa8e1;
+    --iconGreen: #90d690;
+    --iconOrange: #dba94c;
+    --iconGray: #9a9999;
+    --background: #F5F5F5;
+    --textGray: #5b5a5a;
+    --lightestBlue: 235, 244, 248;
+    --lightestGray: 239, 239, 240;
+
+    --secondaryFontFamily: 'Dancing Script', cursive;
+    --baseFontFamily: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: var(--baseFontFamily);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+button {
+    min-width: 180px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--mainBlue);
+}
+
+/*..........................................INFO STYLES*/
+
+.info {
+    display: flex;
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .inner .box {
+    margin-right: 50px;
+}
+
+.info .inner .box i {
+    margin-right: 5px;
+    color: var(--lightBlue);
+}
+
+.info .inner .box span {
+    color: var(--textGray);
+    font-size: 12px;
+}
+
+.info .media {
+    display: flex;
+    gap: 20px;
+}
+
+.info .media a {
+    color: var(--lightBlue);
+}
+
+/*...........................................HEADER STYLES*/
+header {
+    top: 0;
+    z-index: 10;
+    position: sticky;
+    background: var(--white);
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 10%), 0 1px 1px -1px rgb(0 0 0 / 10%)
+}
+
+header .inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    justify-content: space-between;
+}
+
+header .inner .logo {
+    display: block;
+    width: 220px;
+}
+
+header .inner .logo img {
+    height: 100%;
+    width: 100%;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar ul li {
+    padding: 0 15px;
+}
+
+header .navbar ul li a {
+    color: var(--black);
+}
+
+header .navbar ul li:hover {
+    border-bottom: 2px solid var(--mainBlue);
+}
+
+header .navbar ul li:hover a {
+    color: var(--mainBlue);
+}
+
+header #menu-bar {
+    min-width: auto;
+    font-size: 20px;
+    padding: 5px;
+    display: none;
+    color: var(--lightBlue);
+}
+
+.hide {
+    display: none !important;
+}
+
+/*...............................................HERO STYLES*/
+.hero {
+    display: flex;
+    min-height: 580px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(104, 181, 222, 0.19) url("../images/bg.png") no-repeat;
+    background-size: cover;
+}
+
+.hero .inner {
+    width: 80%;
+    gap: 15px;
+    display: grid;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--lightBlue);
+    font-family: var(--secondaryFontFamily);
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero .inner a button {
+    color: var(--white);
+    margin: 20px 0 0;
+    background: var(--mainBlue);
+}
+
+/*.............................................ABOUT STYLES*/
+.about .inner {
+    gap: 30px;
+    display: flex;
+    min-height: 450px;
+    padding: 0 50px;
+    color: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    background: url(../images/about/about-bg.svg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.about .inner p, .mission .inner p {
+    width: 60%;
+}
+
+.about .inner h2 {
+    color: var(--white);
+}
+
+/*.........................................LIMITATION STYLES*/
+.limitation .inner {
+    gap: 40px;
+    padding: 20px;
+    display: grid;
+}
+
+.limitation .inner .box {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.limitation .inner .box p {
+    letter-spacing: 0.05em;
+}
+
+.limitation .inner .box .contain {
+    width: 45%;
+    display: flex;
+    padding: 20px;
+    min-height: 220px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    border: 2px solid rgb(var(--lightestBlue));
+}
+
+.limitation .inner .box .contain:hover {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
+/*............................................WE ARE SECTION*/
+.we-are .inner {
+    position: relative;
+}
+
+.we-are .inner .contain {
+    display: flex;
+}
+
+.we-are .inner img {
+    left: 0;
+    z-index: 2;
+    bottom: 0;
+    right: 40px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.we-are .inner .box-we-are {
+    background-color: rgba(var(--lightestBlue), 0.5);
+}
+
+.we-are .inner .box-we-are,
+.we-are .inner .box-we-offer {
+    flex: 1;
+    gap: 50px;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.we-are .inner .box-we-are h2 {
+    text-align: center;
+}
+
+.we-are .inner .box-we-are  ul li,
+.we-are .inner .box-we-offer ul li {
+    list-style-type: disc;
+    padding-bottom: 30px;
+}
+
+.we-are .inner ul {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.we-are .inner .box-we-offer {
+    background-color: var(--mainBlue);
+}
+
+.we-are .inner .box-we-offer h2 {
+    text-align: center;
+    color: var(--white);
+}
+
+.we-are .inner .box-we-offer ul li {
+    color: var(--white);
+}
+
+
+/*............................................GALLERY STYLES*/
+.gallery {
+    padding: 20px;
+}
+
+.gallery .inner h2 {
+    color: var(--mainBlue);
+    padding-bottom: 20px;
+}
+
+.gallery .inner .box {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .inner .box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery .inner .box img:hover {
+    transform: scale(1.1);
+    transition: all .5s linear;
+}
+
+/*...........................................BENEFITS STYLES*/
+.benefits {
+    padding: 20px;
+}
+
+.benefits .inner {
+    gap: 20px;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefits .inner .box {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.benefits .inner .box.left {
+    align-self: flex-start;
+    background-color: rgba(var(--lightestBlue), 1);
+}
+
+.benefits .inner .box.right {
+    align-self: flex-end;
+    background-color: rgba(var(--lightestGray), 0.8);
+}
+
+
+/*............................................SERVICES STYLES*/
+.services {
+    padding: 20px;
+}
+
+.services .inner .contain {
+    gap: 40px;
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: start;
+}
+
+.services .inner .contain img {
+    width: 50%;
+}
+
+.services .inner .contain .box {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.services .inner .contain .box .include h3 {
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: var(--mainBlue);
+}
+
+.services .inner .contain .box .include ul {
+    column-count: 2;
+    padding-left: 50px;
+    break-after: column;
+    list-style-position: outside;
+}
+
+.services .inner .contain .box .include ul li {
+    font-size: 14px;
+    list-style-type: disc;
+    padding-bottom: 10px;
+}
+
+/*.........................................................MISSION STYLES*/
+.mission .inner {
+    gap: 30px;
+    display: flex;
+    padding: 30px 50px;
+    min-height: 530px;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../images/mission/mission-bg.svg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.mission .inner h2 {
+    color: var(--mainBlue);
+}
+
+/*.....................................CONTACT US MEDIA*/
+.contact .inner h2 {
+    color: var(--mainBlue);
+}
+
+.contact .inner {
+    padding: 40px;
+}
+
+.contact .inner .contain {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.contact .inner .box {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+
+.contact .inner .box h4 {
+    color: var(--mainBlue);
+    margin-bottom: 5px;
+}
+
+.contact .inner .box a i {
+    font-size: 18px;
+}
+
+.contact .inner .box a .fa-phone {
+    color: var(--iconOrange);
+}
+
+.contact .inner .box a .fa-envelope {
+    color: var(--iconGray);
+}
+
+.contact .inner .box a .fa-location-dot {
+    color: var(--iconGreen);
+}
+
+.contact .inner .box a .fa-earth-americas {
+    color: var(--lightBlue);
+}
+
+
+/*...........................................................FOOTER STYLES*/
+.footer {
+    background-color: var(--mainBlue);
+    color: var(--white);
+}
+
+.footer i {
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 65px;
+}
+
+.footer .inner .box {
+    display: grid;
+    gap: 20px;
+}
+
+.footer .inner .box p {
+    font-size: 11px;
+}
+
+.footer .inner .box a img {
+    width: 150px;
+}
+
+.footer .inner .box a {
+    color: var(--white);
+    font-size: 11px;
+}
+
+.footer .inner .box ul li {
+    padding-bottom: 10px;
+}
+
+.footer .inner .box .media i {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(50, 115, 220, 0.3);
+}
+
+.footer .inner .navigation div {
+    display: flex;
+    gap: 35px;
+}
+
+.footer .inner .logo-contain {
+    flex: .5;
+}
+
+
+/*......................................................MEDIA*/
+@media (min-width: 1500px) {
+    .about .inner,
+    .mission .inner {
+        min-height: 550px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /*.....................ABOUT MEDIA STYLES.................*/
+    .about .inner {
+        background: url(../images/about/about-bg-md.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+
+    .about .inner p, .mission .inner p {
+        width: 90%;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .contain p {
+        font-size: 14px;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    /*........................................MISSION MEDIA STYLE*/
+    .mission .inner {
+        background: url(../images/mission/mission-bg-md.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /*..........................................HEADER MEDIA STYLES*/
+    header #menu-bar {
+        display: initial;
+    }
+
+    header .inner img {
+        width: 160px;
+    }
+
+    header .inner {
+        padding: 10px 20px;
+    }
+
+    header .navbar {
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        position: absolute;
+        background: var(--mainBlue);
+    }
+
+    header .navbar.active {
+        display: block;
+    }
+
+    header .navbar ul {
+        display: block;
+        padding: 20px 0;
+    }
+
+    header .navbar ul li {
+        padding: 8px 35px;
+    }
+
+    header .navbar ul li a {
+        color: var(--white);
+    }
+
+    /*.................................HERO MEDIA STYLES*/
+    .hero .inner {
+        padding: 0 20px;
+    }
+
+    /*..................................ABOUT MEDIA STYLES*/
+    .about .inner {
+        background: url(../images/about/about-bg-md.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+
+    .about .inner p, .mission .inner p {
+        width: 90%;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
+    /*............................................WE ARE MEDIA STYLES*/
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
+    justify-content: start;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain img {
+        display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 16px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 2;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 14px;
+    }
+
+    /*........................................MISSION MEDIA STYLE*/
+    .mission .inner {
+        background: url(../images/mission/mission-bg-md.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 769px) {
+    /*...............................GLOBAL MEDIA STYLES*/
+    h2 {
+        font-size: 30px;
+    }
+
+    .mission .inner,
+    .about .inner,
+    .contact .inner {
+        padding: 20px;
+    }
+
+    /*...............................END OF GLOBAL MEDIA STYLES*/
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    header .inner img {
+        width: 160px;
+    }
+
+    header #menu-bar {
+        display: initial;
+    }
+
+    .info {
+        padding: 10px 20px;
+    }
+
+    .info .inner {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .info .inner .box {
+        margin-right: 0;
+        font-size: 12px;
+    }
+
+    header .inner {
+        padding: 10px 20px;
+    }
+
+    header .navbar {
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        position: absolute;
+        background: var(--mainBlue);
+    }
+
+    header .navbar.active {
+        display: block;
+    }
+
+    header .navbar ul {
+        display: block;
+        padding: 20px 0;
+    }
+
+    header .navbar ul li {
+        padding: 8px 35px;
+    }
+
+    header .navbar ul li a {
+        color: var(--white);
+    }
+
+    /*..................................................HERO MEDIA STYLES*/
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero .inner {
+        width: auto;
+        padding: 0 25px;
+    }
+
+    .hero .inner p {
+        font-size: 16px;
+    }
+
+    .hero .inner a {
+        text-align: center;
+    }
+
+    .hero .inner a button {
+        min-width: 110px;
+        margin: 0 auto;
+    }
+
+    /*.........................................ABOUT MEDIA STYLES*/
+    .about .inner {
+        background: url(../images/about/about-bg-sm.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+
+    .about .inner p, .mission .inner p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    /*.........................................LIMITATION MEDIA STYLES*/
+    .limitation .inner .box .contain {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .limitation .inner .contain p {
+        font-size: 12px;
+    }
+
+    /*......................................WE ARE MEDIA STYLES*/
+    .we-are .inner .contain {
+        flex-direction: column;
+    }
+
+    .we-are .inner .box-we-are,
+    .we-are .inner .box-we-offer {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    .we-are .inner ul {
+        max-width: 100%;
+    }
+
+    .we-are .inner img {
+        display: none;
+    }
+
+    /*.................................GALLERY MEDIA STYLES*/
+    .gallery .inner .box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /*...................................BENEFITS MEDIA STYLES*/
+    .benefits .inner {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    /*........................................SERVICE MEDIA STYLES*/
+    .services .inner .contain img {
+        display: none;
+    }
+
+    .services .inner .contain .box .include h3 {
+        font-size: 14px;
+    }
+
+    .services .inner .contain .box .include ul {
+        column-count: 1;
+    }
+
+    .services .inner .contain .box ul li {
+        font-size: 12px;
+    }
+
+    /*........................................MISSION MEDIA STYLE*/
+    .mission .inner {
+        background: url(../images/mission/mission-bg-sm.png) no-repeat;
+        min-height: 400px;
+        background-size: 100% 100%;
+    }
+
+    .mission .inner .box p {
+        font-size: 12px;
+    }
+
+    .mission .inner .box {
+        display: grid;
+    }
+
+    .mission .inner .empty {
+        display: none;
+    }
+
+    /*.................................CONTACT US MEDIA STYLES*/
+    .contact .inner {
+        padding-top: 20px;
+    }
+
+    .contact .inner .contain {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact .inner .box {
+        flex: none;
+    }
+
+    .contact .inner .box h4 {
+        font-size: 12px;
+    }
+
+    .contact .inner .box span {
+        font-size: 12px;
+    }
+
+    .footer .inner {
+        flex-direction: column;
+        padding: 10px;
+        gap: 21px;
+    }
+
+    .footer .inner .box {
+        width: 90%;
+        gap: 5px;
+    }
+
+    .footer .inner .box h3 {
+        font-size: 14px;
+    }
+
+}
+
