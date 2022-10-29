@@ -1,7 +1,7 @@
 :root {
     --white: #ffffff;
     --black: #000000;
-    --mainBlue: #14457B;
+    --mainBlue: 20, 69, 123;
     --lightBlue: #3fa8e1;
     --iconGreen: #90d690;
     --iconOrange: #dba94c;
@@ -11,8 +11,13 @@
     --lightestBlue: 235, 244, 248;
     --lightestGray: 239, 239, 240;
 
-    --secondaryFontFamily: 'Dancing Script', cursive;
     --baseFontFamily: 'Poppins', sans-serif;
+
+    --under-circle-w: 380px;
+    --under-circle-h: 360px;
+
+    --upper-circle-w: 330px;
+    --upper-circle-h: 300px;
 }
 
 * {
@@ -23,6 +28,7 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: var(--baseFontFamily);
 }
 
@@ -46,7 +52,7 @@ button:hover {
 
 h2 {
     font-size: 40px;
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
 }
 
 /*..........................................INFO STYLES*/
@@ -128,11 +134,11 @@ header .navbar ul li a {
 }
 
 header .navbar ul li:hover {
-    border-bottom: 2px solid var(--mainBlue);
+    border-bottom: 2px solid rgb(var(--mainBlue));
 }
 
 header .navbar ul li:hover a {
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
 }
 
 header #menu-bar {
@@ -149,45 +155,77 @@ header #menu-bar {
 
 /*...............................................HERO STYLES*/
 .hero {
-    display: flex;
+    height: 600px;
     min-height: 580px;
-    align-items: center;
-    justify-content: center;
-    background: rgba(104, 181, 222, 0.19) url("../images/bg.png") no-repeat;
-    background-size: cover;
+    scroll-margin-top: 100px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    background-color: rgb(var(--mainBlue));
+    background-image: linear-gradient(-45deg, #20A0D8, rgb(var(--mainBlue)), rgb(71 107 128 / 57%), rgb(var(--mainBlue)));
 }
 
 .hero .inner {
-    width: 80%;
-    gap: 15px;
-    display: grid;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    min-height: 100%;
+    align-items: center;
+    position: relative;
 }
 
 .hero h1 {
     font-size: 50px;
     font-weight: 600;
-    color: var(--lightBlue);
-    font-family: var(--secondaryFontFamily);
+    color: var(--white);
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
+    color: var(--white);
+    max-width: 500px;
 }
 
 .hero .inner a button {
     color: var(--white);
     margin: 20px 0 0;
-    background: var(--mainBlue);
+    background: var(--lightBlue);
+}
+
+.hero .inner img {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 3px 30px rgb(255, 255, 255, 0.44);
+}
+
+.hero .inner img.under {
+    top: 30%;
+    right: 6%;
+    z-index: 2;
+    width: var(--under-circle-w);
+    height: var(--under-circle-h);
+}
+
+.hero .inner img.upper {
+    top: 10%;
+    right: 25%;
+    z-index: 1;
+    width: var(--upper-circle-w);
+    height: var(--upper-circle-h);
 }
 
 /*.............................................ABOUT STYLES*/
+.about {
+    scroll-margin-top: 100px;
+}
+
 .about .inner {
     gap: 30px;
     display: flex;
     min-height: 420px;
     padding: 0 50px;
-    color: var(--white);
+    color: var(--black);
     flex-direction: column;
     justify-content: center;
     background: url(../images/about/about-bg.svg) no-repeat;
@@ -199,13 +237,13 @@ header #menu-bar {
 }
 
 .about .inner h2 {
-    color: var(--white);
+    color: rgb(var(--mainBlue));
 }
 
 /*.........................................LIMITATION STYLES*/
 .limitation .inner {
     gap: 40px;
-    padding: 20px;
+    padding: 20px 50px;
     display: grid;
 }
 
@@ -285,7 +323,7 @@ header #menu-bar {
 }
 
 .we-are .inner .box-we-offer {
-    background-color: var(--mainBlue);
+    background-color: rgb(var(--mainBlue));
 }
 
 .we-are .inner .box-we-offer h2 {
@@ -300,11 +338,12 @@ header #menu-bar {
 
 /*............................................GALLERY STYLES*/
 .gallery {
+    scroll-margin-top: 100px;
     padding: 60px 20px;
 }
 
 .gallery .inner h2 {
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
     padding-bottom: 20px;
 }
 
@@ -329,7 +368,7 @@ header #menu-bar {
 
 /*...........................................DOPPLER STYLES*/
 .doppler {
-    background-color: rgba(var(--lightestGray), 0.8);
+    background-color: rgba(var(--lightestBlue), 0.46);
 }
 
 .doppler .inner {
@@ -362,13 +401,14 @@ header #menu-bar {
 
 .doppler .inner .contain div h4 {
     font-size: 18px;
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
     padding-bottom: 20px;
 }
 
 /*...........................................BENEFITS STYLES*/
 .benefits {
-    padding: 20px;
+    padding: 40px 50px 60px;
+    scroll-margin-top: 100px;
 }
 
 .benefits .inner {
@@ -400,6 +440,7 @@ header #menu-bar {
 /*............................................SERVICES STYLES*/
 .services {
     padding: 20px;
+    scroll-margin-top: 100px;
 }
 
 .services .inner .contain {
@@ -423,7 +464,7 @@ header #menu-bar {
 .services .inner .contain .box .include h3 {
     font-size: 18px;
     padding-bottom: 20px;
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
 }
 
 .services .inner .contain .box .include ul {
@@ -440,6 +481,10 @@ header #menu-bar {
 }
 
 /*.........................................................MISSION STYLES*/
+.mission {
+    scroll-margin-top: 100px;
+}
+
 .mission .inner {
     gap: 30px;
     display: flex;
@@ -447,17 +492,18 @@ header #menu-bar {
     min-height: 420px;
     flex-direction: column;
     justify-content: center;
+    color: var(--white);
     background: url(../images/mission/mission-bg.svg) no-repeat;
     background-size: 100% 100%;
 }
 
 .mission .inner h2 {
-    color: var(--mainBlue);
+    color: var(--white);
 }
 
 /*.....................................CONTACT US MEDIA*/
 .contact .inner h2 {
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
 }
 
 .contact .inner {
@@ -466,7 +512,7 @@ header #menu-bar {
 
 .contact .inner .contain {
     display: flex;
-    padding: 20px 0;
+    padding: 40px 20px;
     justify-content: space-between;
 }
 
@@ -478,7 +524,7 @@ header #menu-bar {
 }
 
 .contact .inner .box h4 {
-    color: var(--mainBlue);
+    color: rgb(var(--mainBlue));
     margin-bottom: 5px;
 }
 
@@ -505,7 +551,7 @@ header #menu-bar {
 
 /*...........................................................FOOTER STYLES*/
 .footer {
-    background-color: var(--mainBlue);
+    background-color: rgb(var(--mainBlue));
     color: var(--white);
 }
 
@@ -568,6 +614,22 @@ header #menu-bar {
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .hero .inner img {
+        box-shadow: 0 0 3px 10px rgb(255, 255, 255, 0.44);
+    }
+
+    .hero .inner img.under {
+        right: 4%;
+        width: calc(var(--under-circle-w) / 1.2);
+        height: calc(var(--under-circle-h) / 1.2);
+    }
+
+    .hero .inner img.upper {
+        right: 17%;
+        width: calc(var(--upper-circle-w) / 1.2);
+        height: calc(var(--upper-circle-w) / 1.2);
+    }
+
     /*.....................ABOUT MEDIA STYLES.................*/
     .about .inner {
         background: url(../images/about/about-bg-md.png) no-repeat;
@@ -618,7 +680,7 @@ header #menu-bar {
         right: 0;
         display: none;
         position: absolute;
-        background: var(--mainBlue);
+        background: rgb(var(--mainBlue));
     }
 
     header .navbar.active {
@@ -641,6 +703,10 @@ header #menu-bar {
     /*.................................HERO MEDIA STYLES*/
     .hero .inner {
         padding: 0 20px;
+    }
+
+    .hero .inner img {
+       display: none;
     }
 
     /*..................................ABOUT MEDIA STYLES*/
@@ -724,13 +790,15 @@ header #menu-bar {
 
     .mission .inner,
     .about .inner,
-    .contact .inner {
+    .contact .inner,
+    .benefits,
+    .limitation .inner {
         padding: 20px;
     }
 
     /*...............................END OF GLOBAL MEDIA STYLES*/
     .hero h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     header .inner img {
@@ -765,7 +833,7 @@ header #menu-bar {
         right: 0;
         display: none;
         position: absolute;
-        background: var(--mainBlue);
+        background: rgb(var(--mainBlue));
     }
 
     header .navbar.active {
@@ -788,24 +856,26 @@ header #menu-bar {
     /*..................................................HERO MEDIA STYLES*/
     .hero {
         min-height: 300px;
+        height: auto;
+        display: flex;
+    }
+
+    .hero .inner h1 {
+
     }
 
     .hero .inner {
         width: auto;
-        padding: 0 25px;
+        padding: 30px 25px;
     }
 
     .hero .inner p {
         font-size: 16px;
+        padding: 20px 0;
     }
 
-    .hero .inner a {
-        text-align: center;
-    }
-
-    .hero .inner a button {
-        min-width: 110px;
-        margin: 0 auto;
+    .hero img {
+        display: none;
     }
 
     /*.........................................ABOUT MEDIA STYLES*/
@@ -924,6 +994,7 @@ header #menu-bar {
     .contact .inner .contain {
         flex-direction: column;
         gap: 30px;
+        padding: 40px 0;
     }
 
     .contact .inner .box {
@@ -953,6 +1024,16 @@ header #menu-bar {
     .footer .inner .box h3 {
         font-size: 14px;
     }
-
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
