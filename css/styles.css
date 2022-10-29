@@ -481,6 +481,10 @@ header #menu-bar {
 }
 
 /*.........................................................MISSION STYLES*/
+.mission {
+    scroll-margin-top: 100px;
+}
+
 .mission .inner {
     gap: 30px;
     display: flex;
