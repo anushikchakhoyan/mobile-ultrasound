@@ -273,7 +273,7 @@ header #menu-bar {
     text-align: center;
 }
 
-.we-are .inner .box-we-are  ul li,
+.we-are .inner .box-we-are ul li,
 .we-are .inner .box-we-offer ul li {
     list-style-type: disc;
     padding-bottom: 30px;
@@ -325,6 +325,41 @@ header #menu-bar {
 .gallery .inner .box img:hover {
     transform: scale(1.1);
     transition: all .5s linear;
+}
+
+/*...........................................DOPPLER STYLES*/
+.doppler {
+    background-color: rgba(var(--lightestGray), 0.8);
+}
+
+.doppler .inner {
+    padding: 30px;
+}
+
+.doppler .inner .box {
+    padding-bottom: 40px;
+}
+
+.doppler .inner .box p {
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.doppler .inner .contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 60px;
+    padding: 30px 0;
+}
+
+.doppler .inner .contain div {
+    width: 33%;
+}
+
+.doppler .inner .contain div h4 {
+    color: var(--mainBlue);
+    padding-bottom: 20px;
 }
 
 /*...........................................BENEFITS STYLES*/
@@ -627,7 +662,7 @@ header #menu-bar {
     /*............................................WE ARE MEDIA STYLES*/
     .we-are .inner .box-we-are,
     .we-are .inner .box-we-offer {
-    justify-content: start;
+        justify-content: start;
     }
 
     .we-are .inner ul {
@@ -796,6 +831,25 @@ header #menu-bar {
 
     .we-are .inner img {
         display: none;
+    }
+
+    /*.....................................DOPPLER MEDIA STYLES*/
+    .doppler .inner .box p {
+        font-size: 13px;
+    }
+
+    .doppler .inner .contain {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .doppler .inner .contain div {
+        width: 90%;
+    }
+
+    .doppler .inner .contain div p {
+        font-size: 12px;
     }
 
     /*.................................GALLERY MEDIA STYLES*/
