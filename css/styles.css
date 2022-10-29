@@ -23,6 +23,7 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: var(--baseFontFamily);
 }
 
@@ -300,6 +301,7 @@ header #menu-bar {
 
 /*............................................GALLERY STYLES*/
 .gallery {
+    scroll-margin-top: 100px;
     padding: 60px 20px;
 }
 
@@ -369,6 +371,7 @@ header #menu-bar {
 /*...........................................BENEFITS STYLES*/
 .benefits {
     padding: 20px;
+    scroll-margin-top: 100px;
 }
 
 .benefits .inner {
@@ -400,6 +403,7 @@ header #menu-bar {
 /*............................................SERVICES STYLES*/
 .services {
     padding: 20px;
+    scroll-margin-top: 100px;
 }
 
 .services .inner .contain {
