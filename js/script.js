@@ -1,6 +1,7 @@
 (() => {
     const menu = document.querySelector('header .inner #menu-bar');
     const navbar = document.querySelector('header .inner nav');
+    const navLinks = document.querySelectorAll('.navbar li');
 
     menu.addEventListener('click', openToggleFunc);
 
@@ -8,7 +9,6 @@
         navbar.classList.toggle('active');
     }
 
-    const navLinks = document.querySelectorAll('.navbar li');
     if (navLinks.length) {
         navLinks.forEach((link) => {
             link.addEventListener('click', (e) => {
@@ -19,4 +19,7 @@
             });
         });
     }
+
+    const date = new Date();
+    document.getElementById('currentYear').innerHTML = date.getFullYear();
 })();

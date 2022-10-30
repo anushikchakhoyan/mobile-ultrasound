@@ -345,7 +345,10 @@ header #menu-bar {
 /*............................................GALLERY STYLES*/
 .gallery {
     scroll-margin-top: 100px;
-    padding: 60px 20px;
+}
+
+.gallery .inner {
+    padding: 40px;
 }
 
 .gallery .inner h2 {
@@ -378,11 +381,7 @@ header #menu-bar {
 }
 
 .doppler .inner {
-    padding: 30px;
-}
-
-.doppler .inner .box {
-    padding-bottom: 40px;
+    padding: 40px;
 }
 
 .doppler .inner .box p {
@@ -392,9 +391,9 @@ header #menu-bar {
 
 .doppler .inner .contain {
     display: flex;
-    justify-content: space-between;
+    padding: 40px 0 0;
     align-items: start;
-    padding: 30px 0;
+    justify-content: space-between;
 }
 
 .doppler .inner .contain div {
@@ -403,6 +402,10 @@ header #menu-bar {
 
 .doppler .inner .contain div {
     text-align: justify;
+}
+
+.doppler .inner .contain p {
+    font-size: 14px;
 }
 
 .doppler .inner .contain div h4 {
@@ -445,7 +448,7 @@ header #menu-bar {
 
 /*............................................SERVICES STYLES*/
 .services {
-    padding: 20px;
+    padding: 20px 40px;
     scroll-margin-top: 100px;
 }
 
@@ -518,8 +521,7 @@ header #menu-bar {
 
 .contact .inner .contain {
     display: flex;
-    padding: 40px 20px;
-    justify-content: space-between;
+    padding: 40px 0 0;
 }
 
 .contact .inner .box a {
@@ -527,6 +529,10 @@ header #menu-bar {
     flex: 1;
     gap: 10px;
     color: var(--black);
+}
+
+.contact .inner .box {
+    width: 30%;
 }
 
 .contact .inner .box h4 {
@@ -550,40 +556,31 @@ header #menu-bar {
     color: var(--iconGreen);
 }
 
-.contact .inner .box a .fa-earth-americas {
-    color: var(--lightBlue);
-}
-
-
 /*...........................................................FOOTER STYLES*/
 .footer {
     background-color: rgb(var(--mainBlue));
     color: var(--white);
 }
 
-.footer i {
-    padding-right: 15px;
-    font-size: 15px;
-}
-
 .footer .inner {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 65px 0;
+    padding: 50px 40px;
+    justify-content: space-around;
 }
 
 .footer .inner .box {
-    display: grid;
+    flex: 1;
     gap: 20px;
+    display: grid;
 }
 
-.footer .inner .box p{
-    font-size: 14px;
+.footer .inner .box p {
+    font-size: 16px;
 }
 
 .footer .inner .box a img {
-    width: 150px;
+    width: 170px;
 }
 
 .footer .inner .box a {
@@ -595,30 +592,39 @@ header #menu-bar {
     padding-bottom: 10px;
 }
 
-.footer .inner .box .media i {
-    text-align: center;
+.footer .inner .box .media {
+    gap: 10px;
+    display: flex;
+    padding-top: 10px;
+}
+
+.footer .inner .box .media a {
     width: 40px;
     height: 40px;
-    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(50, 115, 220, 0.3);
 }
 
 .footer .inner .navigation div {
     display: flex;
-    gap: 35px;
+    gap: 140px;
 }
 
 .footer .inner .logo-contain {
-    flex: .5;
+    flex: 1;
 }
 
 .footer .contain {
-    text-align: center;
     padding: 15px;
+    text-align: center;
     border-top: 1px solid rgba(50, 115, 220, 0.3);
-
 }
 
+.footer .contain {
+    font-size: 12px;
+}
 
 /*......................................................MEDIA*/
 @media (min-width: 1550px) {
@@ -673,9 +679,35 @@ header #menu-bar {
         min-height: 400px;
         background-size: 100% 100%;
     }
+
+    .doppler .inner .contain p {
+        font-size: 12px;
+    }
+
+    .contact .inner .box span {
+        font-size: 12px;
+    }
+
+    .footer .inner .navigation div {
+        gap: 100px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    .mission .inner,
+    .about .inner,
+    .contact .inner,
+    .services,
+    .benefits,
+    .gallery .inner,
+    .doppler .inner,
+    .limitation .inner {
+        padding: 20px;
+    }
     /*..........................................HEADER MEDIA STYLES*/
     header #menu-bar {
         display: initial;
@@ -721,7 +753,7 @@ header #menu-bar {
     }
 
     .hero .inner img {
-       display: none;
+        display: none;
     }
 
     /*..................................ABOUT MEDIA STYLES*/
@@ -788,12 +820,28 @@ header #menu-bar {
     /*...........................................DOPPLER STYLES*/
     .doppler .inner .contain {
         flex-direction: column;
-        padding: 0;
+        padding: 20px 0 0;
         gap: 20px;
+    }
+
+    .doppler .inner .contain div h4 {
+        padding-bottom: 10px;
     }
 
     .doppler .inner .contain div {
         width: 90%;
+    }
+
+    .doppler .inner .contain p {
+        font-size: 12px;
+    }
+
+    .contact .inner .box span {
+        font-size: 12px;
+    }
+
+    .footer .inner .navigation div {
+        gap: 40px;
     }
 }
 
@@ -806,7 +854,10 @@ header #menu-bar {
     .mission .inner,
     .about .inner,
     .contact .inner,
+    .services,
     .benefits,
+    .gallery .inner,
+    .doppler .inner,
     .limitation .inner {
         padding: 20px;
     }
@@ -941,15 +992,19 @@ header #menu-bar {
 
     .doppler .inner .contain {
         flex-direction: column;
-        padding: 0;
+        padding: 20px 0 0;
         gap: 20px;
+    }
+
+    .doppler .inner .contain div h4 {
+        padding-bottom: 10px;
     }
 
     .doppler .inner .contain div {
         width: 90%;
     }
 
-    .doppler .inner .contain div p {
+    .doppler .inner .contain p {
         font-size: 12px;
     }
 
@@ -1014,6 +1069,7 @@ header #menu-bar {
 
     .contact .inner .box {
         flex: unset;
+        width: 100%;
     }
 
     .contact .inner .box h4 {
@@ -1044,8 +1100,13 @@ header #menu-bar {
         font-size: 12px;
     }
 
-    .footer .contain p{
+    .footer .contain p {
         font-size: 12px;
+    }
+
+    .footer .inner .navigation div {
+        gap: 4px;
+        flex-direction: column;
     }
 }
 
