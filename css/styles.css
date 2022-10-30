@@ -651,7 +651,7 @@ header #menu-bar {
         height: calc(var(--upper-circle-w) / 1.2);
     }
 
-    /*.....................ABOUT MEDIA STYLES.................*/
+    /*....................................ABOUT MEDIA STYLES.................*/
     .about .inner {
         background: url(../images/about/about-bg-md.png) no-repeat;
         min-height: 400px;
@@ -680,14 +680,23 @@ header #menu-bar {
         background-size: 100% 100%;
     }
 
+    /*............................................WE ARE MEDIA STYLES*/
+    .we-are .inner .box-we-are ul li,
+    .we-are .inner .box-we-offer ul li {
+        font-size: 12px;
+    }
+
+    /*...................................DOPPLER MEDIA STYLES*/
     .doppler .inner .contain p {
         font-size: 12px;
     }
 
+    /*...................................CONTACT US MEDIA STYLES*/
     .contact .inner .box span {
         font-size: 12px;
     }
 
+    /*...................................FOOTER MEDIA STYLES*/
     .footer .inner .navigation div {
         gap: 100px;
     }
@@ -783,6 +792,11 @@ header #menu-bar {
         justify-content: start;
     }
 
+    .we-are .inner .box-we-are ul li,
+    .we-are .inner .box-we-offer ul li {
+        font-size: 14px;
+    }
+
     .we-are .inner ul {
         max-width: 100%;
     }
@@ -817,7 +831,7 @@ header #menu-bar {
         background-size: 100% 100%;
     }
 
-    /*...........................................DOPPLER STYLES*/
+    /*...........................................DOPPLER MEDIA STYLES*/
     .doppler .inner .contain {
         flex-direction: column;
         padding: 20px 0 0;
@@ -836,10 +850,12 @@ header #menu-bar {
         font-size: 12px;
     }
 
+    /*...........................................CONTACT US MEDIA STYLES*/
     .contact .inner .box span {
         font-size: 12px;
     }
 
+    /*...........................................FOOTER MEDIA STYLES*/
     .footer .inner .navigation div {
         gap: 40px;
     }
@@ -861,7 +877,6 @@ header #menu-bar {
     .limitation .inner {
         padding: 20px;
     }
-
     /*...............................END OF GLOBAL MEDIA STYLES*/
     .hero h1 {
         font-size: 36px;
@@ -926,10 +941,6 @@ header #menu-bar {
         display: flex;
     }
 
-    .hero .inner h1 {
-
-    }
-
     .hero .inner {
         width: auto;
         padding: 30px 25px;
@@ -973,8 +984,13 @@ header #menu-bar {
 
     .we-are .inner .box-we-are,
     .we-are .inner .box-we-offer {
-        width: 100%;
-        padding: 20px 30px;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .we-are .inner .box-we-are ul li,
+    .we-are .inner .box-we-offer ul li {
+       font-size: 12px;
     }
 
     .we-are .inner ul {
@@ -1110,6 +1126,8 @@ header #menu-bar {
     }
 }
 
+/*...........................................ANIMATION*/
+
 @keyframes gradient {
     0% {
         background-position: 0 50%;
@@ -1122,6 +1140,7 @@ header #menu-bar {
     }
 }
 
+/*...........................................SCROLLBAR STYLES*/
 ::-webkit-scrollbar-track {
     background-color: var(--white);
 }
