@@ -53,6 +53,7 @@ button:hover {
 h2 {
     font-size: 40px;
     color: rgb(var(--mainBlue));
+    text-transform: uppercase;
 }
 
 /*..........................................INFO STYLES*/
@@ -556,15 +557,15 @@ header #menu-bar {
 }
 
 .footer i {
-    padding-right: 10px;
+    padding-right: 15px;
     font-size: 15px;
 }
 
 .footer .inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 65px 65px;
+    padding: 65px 0;
 }
 
 .footer .inner .box {
@@ -572,8 +573,8 @@ header #menu-bar {
     gap: 20px;
 }
 
-.footer .inner .box p {
-    font-size: 16px;
+.footer .inner .box p{
+    font-size: 14px;
 }
 
 .footer .inner .box a img {
@@ -582,7 +583,7 @@ header #menu-bar {
 
 .footer .inner .box a {
     color: var(--white);
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .footer .inner .box ul li {
@@ -591,7 +592,9 @@ header #menu-bar {
 
 .footer .inner .box .media i {
     text-align: center;
-    padding: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 13px;
     background-color: rgba(50, 115, 220, 0.3);
 }
 
@@ -602,6 +605,13 @@ header #menu-bar {
 
 .footer .inner .logo-contain {
     flex: .5;
+}
+
+.footer .contain {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(50, 115, 220, 0.3);
+
 }
 
 
@@ -1021,8 +1031,16 @@ header #menu-bar {
         gap: 5px;
     }
 
+    .footer .inner .box a {
+        font-size: 12px;
+    }
+
     .footer .inner .box h3 {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .footer .contain p{
+        font-size: 12px;
     }
 }
 
