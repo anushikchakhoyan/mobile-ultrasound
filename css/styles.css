@@ -133,12 +133,17 @@ header .navbar ul li a {
     color: var(--black);
 }
 
+header .navbar ul li.active a {
+    color: var(--lightBlue);
+    font-weight: 500;
+}
+
 header .navbar ul li:hover {
-    border-bottom: 2px solid rgb(var(--mainBlue));
+    border-bottom: 2px solid var(--lightBlue);
 }
 
 header .navbar ul li:hover a {
-    color: rgb(var(--mainBlue));
+    color: var(--lightBlue);
 }
 
 header #menu-bar {
@@ -1037,3 +1042,18 @@ header #menu-bar {
         background-position: 0 50%;
     }
 }
+
+::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(var(--mainBlue), 0.5);
+}
+
