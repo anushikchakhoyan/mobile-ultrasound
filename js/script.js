@@ -11,7 +11,7 @@
 
     if (navLinks.length) {
         navLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
+            link.addEventListener('click', (_) => {
                 navLinks.forEach((link) => {
                     link.classList.remove('active');
                 });
